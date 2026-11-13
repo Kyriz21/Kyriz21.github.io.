@@ -1,27 +1,744 @@
 <!doctype html>
-<html lang="id">
-<head>
+<html lang="id"><head><script data-bard-client-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxMjM4NDgzOTE4ODc5NTQ0MjU0MCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjX2M4N2NiYjAzZDBmMGNhODJfaW5kZXguaHRtbC01NTgifSwiZXhwIjoxNzk0NTUwMTczLCJpYXQiOjE3OTQ1NDY1NzMsImFsZyI6IlJTMjU2In0.CuHkmfwa27sW6veaHQVmDztRgkokicS53Ay--bdabhI1X5ReGJXy8k_Qh7IRvngWvcPHxG3erVOhI4P9YyKbtAfHKmJsFGE0HTvbyQWT4XvbmrWZUal1ZaELY5iaPH4I_5RVCz-P8-1gVALvJJL7fW1hF6Cv6xwCa3OxqjArRO06Ka-vBajOZlKiH1bLConeu9rpuo2sQOx5PNhBU33yycUzFps_YMzC-mMoUgpAON48W_JbGxiWJ9W0jNzXRDhry6MnQ22AsE_levLDW_nqz9W8Ypcgb8Wf8oRRZl4xJ7u1bod7kh2rW7WDKgyRp4wyYQ8BtX3SzQUtXZf7ckro0g","c_c87cbb03d0f0ca82_index.html-558")</script><script data-bard-client-injected="true">
+  document.addEventListener('input', (event) => {
+    if (event.target && (event.target.isContentEditable || event.target.hasAttribute('contenteditable'))) {
+      const clonedDoc = document.cloneNode(true);
+      const injectedScripts = clonedDoc.querySelectorAll('[data-bard-client-injected="true"]');
+      injectedScripts.forEach(el => el.remove());
+      window.parent.postMessage({
+        type: 'inlineEdit',
+        html: '<!DOCTYPE html>\n' + clonedDoc.documentElement.outerHTML
+      }, '*');
+    }
+  });
+</script><script data-bard-client-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
+</script><script data-bard-client-injected="true">(function(){'use strict';var k=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function m(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var q=m(this);
+function r(a,b){if(b)a:{var d=q;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&k(d,a,{configurable:!0,writable:!0,value:b})}}function t(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function u(a){return t(a())}
+r("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});r("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function v(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var aa=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let y=null;function z(a={}){return y?y:a.u?y=a.u:y=w(window.getComputedStyle(document.documentElement))}function A(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function B(a,b={}){var d;if(!(d=b.width)){d=A(a,"border-left-width");var c=A(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=A(a,"border-top-width"),c=A(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function C(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function ba(a){return u(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function ca(a,b,d){return u(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return ba(c)})}
+var D=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||D(a,b)};function da(a,b){return z(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function E(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=aa();try{b.className=`${b.className} ${f}`}catch(h){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=da(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function F(a){return a.search(/^(data:)/)!==-1}function G(a,b,d){return u(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var h=new FileReader;h.onerror=g;h.onloadend=()=>{try{f(d({v:c,result:h.result}))}catch(l){g(l)}};h.readAsDataURL(e)})})}const H={};function ea(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function I(a,b,d){return u(function*(){var c=ea(a,b,d.F);if(H[c]!=null)return H[c];d.B&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield G(a,d.l,({v:g,result:h})=>{b||(b=g.headers.get("Content-Type")||"");return h.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.o||""}return H[c]=e})};const J={R:"application/font-woff",S:"application/font-woff",O:"application/font-truetype",C:"application/vnd.ms-fontobject",J:"image/png",H:"image/jpeg",G:"image/jpeg",D:"image/gif",N:"image/tiff",M:"image/svg+xml",P:"image/webp"};function K(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function fa(a){return u(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):C(b)})}function ha(a,b){return u(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return C(d)}d=a.poster;d=yield I(d,J[K(d).toLowerCase()]||"",b);return C(d)})}
+function ia(a,b){return u(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield L(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ja(a,b){return u(function*(){return D(a,HTMLCanvasElement)?fa(a):D(a,HTMLVideoElement)?ha(a,b):D(a,HTMLIFrameElement)?ia(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function ka(a,b,d){return u(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(D(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||D(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>L(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function la(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):z(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);D(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function ma(a,b){D(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function na(a,b){return u(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield L(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function L(a,b,d){return u(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ja(c,b)).then(c=>ka(a,c,b)).then(c=>{D(c,Element)&&(la(a,c,b),E(a,c,":before",b),E(a,c,":after",b),D(a,HTMLTextAreaElement)&&(c.textContent=a.value),D(a,HTMLInputElement)&&c.setAttribute("value",a.value),ma(a,c));return c}).then(c=>na(c,b)):null})};const M=/url\((['"]?)([^'"]+?)\1\)/g,oa=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,pa=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function qa(a){var b=[];a.replace(M,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!F(d))}
+function ra(a,b,d,c){return u(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield I(e,J[K(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function sa(a,{K:b}){return b?a.replace(pa,d=>{for(;;){let [c,,e]=oa.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function N(a,b,d){return u(function*(){if(a.search(M)===-1)return a;var c=sa(a,d);return qa(c).reduce((e,f)=>e.then(g=>ra(g,f,b,d)),Promise.resolve(c))})};function O(a,b,d){return u(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield N(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function ta(a,b){return u(function*(){(yield O("background",a,b))||(yield O("background-image",a,b));(yield O("mask",a,b))||(yield O("-webkit-mask",a,b))||(yield O("mask-image",a,b))||(yield O("-webkit-mask-image",a,b))})}
+function ua(a,b){return u(function*(){var d=D(a,HTMLImageElement);if(d&&!F(a.src)||D(a,SVGImageElement)&&!F(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield I(c,J[K(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.h?(...h)=>{try{f(b.h(...h))}catch(l){g(l)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function va(a,b){return u(function*(){var d=w(a.childNodes).map(c=>P(c,b));yield Promise.all(d).then(()=>a)})}function P(a,b){return u(function*(){D(a,Element)&&(yield ta(a,b),yield ua(a,b),yield va(a,b))})};const Q={};function R(a){return u(function*(){var b=Q[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return Q[a]=b})}function S(a,b){return u(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>u(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return G(g,b.l,({result:h})=>{d=d.replace(f,`url(${h})`);return[f,h]})}));return Promise.all(e).then(()=>d)})}
+function T(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function wa(a,b){return u(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let h=g+1;f=R(f.href).then(l=>S(l,b)).then(l=>T(l).forEach(p=>{try{e.insertRule(p,p.startsWith("@import")?h+=1:e.cssRules.length)}catch(x){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(h=>h.href==null)||document.styleSheets[0];e.href!=null&&c.push(R(e.href).then(h=>S(h,b)).then(h=>T(h).forEach(l=>{g.insertRule(l,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function xa(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(M)!==-1)}function ya(a,b){return u(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=yield wa(w(a.ownerDocument.styleSheets),b);return xa(d)})}
+function za(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function Aa(a,b){return u(function*(){var d=yield ya(a,b),c=za(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>N(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function Ba(a,b){return u(function*(){var d=b.m!=null?b.m:b.A?null:yield Aa(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function Ca(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield L(a,b,!0);yield Ba(e,b);yield P(e,b);v(e,b);return yield ca(e,d,c)})}
+function Da(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield Ca(a,b);e=yield C(e);var f=document.createElement("canvas"),g=f.getContext("2d"),h=b.I||window.devicePixelRatio||1,l=b.j||d,p=b.i||c;f.width=l*h;f.height=p*h;!b.L&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${l}`;f.style.height=`${p}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function Ea(a,b={}){return u(function*(){return(yield Da(a,b)).toDataURL()})};const Fa=["gemini.google.com","corp.google.com","proxy.googlers.com"];function V(a){a=Number(a.replace(/px$/,""));return Number.isFinite(a)?a:0}function W(){return document.body.querySelectorAll('[class*="animate"]').length>0}function X(a,b){var d=document.createElement("canvas");d.width=a;d.height=b;return d.toDataURL("image/png")}const Y=X(1,1);
+function Z(a,b){return u(function*(){var d=Math.max(b?b.width:a.offsetWidth,1),c=Math.max(b?b.height:a.offsetHeight,1),e=HTMLCanvasElement.prototype.toDataURL;b&&(HTMLCanvasElement.prototype.toDataURL=function(f,g){var h;if(h=this.isConnected&&a.contains(this)){{let n=this.getBoundingClientRect();if(n.width===0||n.height===0)h=!1;else if(window.getComputedStyle(this).position==="fixed")h=n.bottom>0&&n.top<b.height&&n.right>0&&n.left<b.width;else{h=a.getBoundingClientRect();var l=n.top-h.top,p=n.left-
+h.left,x=n.right-h.left;h=n.bottom-h.top>b.scrollTop&&l<b.scrollTop+b.height&&x>b.scrollLeft&&p<b.scrollLeft+b.width}}h=!h}return h?"data:,":e.call(this,f,g)});try{let f=window.getComputedStyle(a),g=b?`${V(f.marginTop)-b.scrollTop}px`:void 0,h=b?`${V(f.marginLeft)-b.scrollLeft}px`:void 0,l=`${Math.max(a.offsetWidth,d)}px`,p,x=`${Math.max(a.offsetHeight,c+((p=b==null?void 0:b.scrollTop)!=null?p:0))}px`;return yield Ea(a,Object.assign({},{width:d,height:c,j:d,i:c},b?{style:{width:l,height:x,marginTop:g,
+marginLeft:h,marginBlockStart:g,marginInlineStart:h}}:{},{A:!0,filter:n=>{if(n.tagName==="IMG"){let U=n.getAttribute("src");if(!U||U.trim()===""||n.style.display==="none")return!1}return!0},o:Y,h:()=>Y}))}catch(f){return X(d,c)}finally{HTMLCanvasElement.prototype.toDataURL=e}})}
+function Ga(){return u(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ha(a){return u(function*(){var b={width:window.innerWidth||document.documentElement.clientWidth||document.body.offsetWidth,height:window.innerHeight||document.documentElement.clientHeight||document.body.offsetHeight,scrollTop:window.scrollY||document.documentElement.scrollTop||document.body.scrollTop||0,scrollLeft:window.scrollX||document.documentElement.scrollLeft||document.body.scrollLeft||0},d=document.body;if(W()){let c=yield Ga();d=c;document.body.appendChild(c)}b=yield Z(d,b);W()&&
+document.body.removeChild(d);window.parent.postMessage({type:"SEND_SCREENSHOT",image:b,topOffset:0},a.origin)})}function Ia(a){return u(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}window.addEventListener("message",a=>u(function*(){if(Fa.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ha(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ia(a)))}}));
+})();</script><script data-bard-client-injected="true">(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script data-bard-client-injected="true">
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-client-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.j=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.h=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.i="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script data-bard-client-injected="true">((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-client-injected="true">(function() {
+  function normalizeSlug(str) {
+    try {
+      return str
+        .trim()
+        .toLowerCase()
+        .replace(/[^p{L}p{N}s_-]/gu, '')
+        .replace(/s+/g, '-');
+    } catch (e) {
+      return str
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9s_-]/g, '')
+        .replace(/s+/g, '-');
+    }
+  }
+
+  function findTargetElement(hash) {
+    if (!hash || hash === '#') {
+      return null;
+    }
+    const rawId = hash.startsWith('#') ? hash.slice(1) : hash;
+    let decodedId = rawId;
+    try {
+      decodedId = decodeURIComponent(rawId);
+    } catch (e) {
+      // Ignore URI malformed errors.
+    }
+
+    // 1. Direct ID match (raw and decoded).
+    let target = document.getElementById(rawId) || document.getElementById(decodedId);
+    if (target) {
+      return target;
+    }
+
+    // 2. Name attribute match (<a name="...">).
+    try {
+      if (typeof CSS !== 'undefined' && CSS.escape) {
+        target =
+          document.querySelector('[name="' + CSS.escape(rawId) + '"]') ||
+          document.querySelector('[name="' + CSS.escape(decodedId) + '"]');
+      } else {
+        const namedElements = document.getElementsByName(rawId);
+        if (namedElements && namedElements.length > 0) {
+          return namedElements[0];
+        }
+      }
+    } catch (e) {
+      // Ignore querySelector syntax errors.
+    }
+    if (target) {
+      return target;
+    }
+
+    // 3. Match heading text by slug (for Markdown TOCs where headings lack explicit IDs).
+    const targetSlug = normalizeSlug(decodedId);
+    if (targetSlug) {
+      for (const heading of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+        if (normalizeSlug(heading.textContent || '') === targetSlug) {
+          return heading;
+        }
+      }
+    }
+
+    return null;
+  }
+
+  document.addEventListener('click', function(event) {
+    const target = event.target;
+    const anchor = target && typeof target.closest === 'function' ? target.closest('a') : null;
+    if (!anchor) {
+      return;
+    }
+
+    const href = anchor.getAttribute('href');
+    if (
+      !href ||
+      href.trim().toLowerCase().startsWith('javascript:') ||
+      anchor.hasAttribute('download')
+    ) {
+      return;
+    }
+
+    // Check if the link is an in-page hash / anchor link.
+    if (href.startsWith('#')) {
+      event.preventDefault();
+      const targetElement = findTargetElement(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+      return;
+    }
+
+    // Check if the URL has the same origin/pathname but with a hash.
+    try {
+      const url = new URL(anchor.href, window.location.href);
+      if (
+        url.hash &&
+        url.origin === window.location.origin &&
+        url.pathname === window.location.pathname
+      ) {
+        event.preventDefault();
+        const targetElement = findTargetElement(url.hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+        return;
+      }
+    } catch (e) {
+      // Fall through if URL parsing fails.
+    }
+
+    // For all external or full navigation links, prevent iframe-level navigation
+    // (which breaks in AGSA WebView or sandboxed iframes) and ensure they open
+    // safely in a new tab/window.
+    if (anchor.target !== '_blank') {
+      event.preventDefault();
+      window.open(anchor.href, '_blank', 'noopener,noreferrer');
+    }
+  }, {capture: true});
+})();</script><script data-bard-client-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script data-bard-client-injected="true">(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101625">
-  <meta name="description" content="Portofolio Rahmad Rizky Fauzi — Data & Reporting, Business Operations, HR Administration, dan Digital Systems.">
-  <title>Rahmad Rizky Fauzi — Data, Operations & HR Portfolio</title>
+  <meta name="theme-color" content="#0d1320">
+  <meta name="description" content="Portofolio Rahmad Rizky Fauzi — Data &amp; Reporting, Business Operations, HR Administration, dan Digital Systems.">
+  <title>Rahmad Rizky Fauzi — Data, Operations &amp; HR Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
   
-  <!-- Memanggil file CSS eksternal -->
+
+  <!-- Mendukung styles.css maupun style.css -->
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="style.css">
-  <!-- Memanggil file JS eksternal -->
-  <script src="script.js" defer></script>
+  <script src="script.js" defer=""></script>
 </head>
-<body>
-  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+<body style="overflow: hidden;">
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress" style="width: 33.151%;"></span></div>
   <div class="noise" aria-hidden="true"></div>
 
   <!-- Sticky Glass Header -->
-  <div class="site-header-wrap" id="headerWrap">
-    <header class="site-header" id="top">
+  <div class="site-header-wrap scrolled" id="headerWrap">
+    <header class="site-header section-shell" id="top">
       <a class="brand" href="#top" aria-label="Rahmad, kembali ke atas">
         <span class="brand-mark">R<span>.</span></span>
         <span class="brand-name">RAHMAD<span>RF</span></span>
@@ -30,16 +747,17 @@
         <span></span><span></span>
       </button>
       <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
-        <a href="#about" data-nav="about">Tentang</a>
-        <a href="#expertise" data-nav="expertise">Keahlian</a>
+        <a href="#about" data-nav="about" class="">Tentang</a>
+        <a href="#expertise" data-nav="expertise" class="active-link">Keahlian</a>
         <a href="#work" data-nav="work">Proyek</a>
         <a href="#experience" data-nav="experience">Pengalaman</a>
         <button type="button" class="nav-cv-btn" id="openCvBtn">Ringkasan CV <span>📄</span></button>
+        
         <button type="button" class="cmd-trigger-btn" id="openCmdBtn" title="Menu Aksi Cepat (Ctrl+K)">Aksi <kbd>⌘K</kbd></button>
         <a class="nav-contact" href="#contact" data-nav="contact">Kontak <span>↗</span></a>
         <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema" title="Ganti tema Gelap/Terang">
-          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"></path></svg>
         </button>
       </nav>
     </header>
@@ -52,7 +770,7 @@
       <div class="hero-copy reveal">
         <p class="eyebrow">
           <span class="status-dot"></span>
-          AVAILABLE FOR COLLABORATION & OPPORTUNITIES
+          AVAILABLE FOR COLLABORATION &amp; OPPORTUNITIES
           <span class="eyebrow-year">— 2026</span>
         </p>
         <h1 id="heroTitle">Membuat data<br>lebih <em>bermakna.</em></h1>
@@ -64,26 +782,26 @@
           <button class="button button-outline" type="button" id="heroQuickContact">Kirim pesan cepat <span>✉</span></button>
         </div>
         <div class="hero-meta">
-          <span><i class="meta-line"></i> Samarinda, Kaltim (<span class="live-clock" id="localTime">WITA</span>)</span>
-          <span>S.Kom · Data · HR & Business Operations</span>
+          <span><i class="meta-line"></i> Samarinda, Kaltim (<span class="live-clock" id="localTime">13.09 WITA</span>)</span>
+          <span>S.Kom · Data · HR &amp; Business Operations</span>
         </div>
       </div>
 
       <div class="hero-art reveal reveal-delay" id="heroArt" aria-label="Ilustrasi abstrak data dan sistem">
-        <div class="art-orbit orbit-one" data-depth="0.03"></div>
-        <div class="art-orbit orbit-two" data-depth="0.05"></div>
-        <div class="art-orbit orbit-three" data-depth="0.02"></div>
+        <div class="art-orbit orbit-one" data-depth="0.03" style="transform: translate3d(7.56px, -1.095px, 0px);"></div>
+        <div class="art-orbit orbit-two" data-depth="0.05" style="transform: translate3d(12.6px, -1.825px, 0px);"></div>
+        <div class="art-orbit orbit-three" data-depth="0.02" style="transform: translate3d(5.04px, -0.73px, 0px);"></div>
         <div class="art-core" id="artCoreTrigger" title="Klik untuk melihat proyek">
           <span>R</span>
           <small>DATA<br>IN MOTION</small>
         </div>
-        <div class="art-chip chip-a" data-depth="0.06"><span class="chip-dot"></span> DATA INSIGHT</div>
-        <div class="art-chip chip-b" data-depth="0.08"><span class="chip-bars"><i></i><i></i><i></i><i></i></span> REPORTING</div>
-        <div class="art-chip chip-c" data-depth="0.05">01 <span>HR & ADMIN FLOW</span></div>
-        <div class="art-chip chip-d" data-depth="0.07">✳ <span>CLEAN SYSTEM</span></div>
+        <div class="art-chip chip-a" data-depth="0.06" style="transform: translate3d(15.12px, -2.19px, 0px);"><span class="chip-dot"></span> DATA INSIGHT</div>
+        <div class="art-chip chip-b" data-depth="0.08" style="transform: translate3d(20.16px, -2.92px, 0px);"><span class="chip-bars"><i></i><i></i><i></i><i></i></span> REPORTING</div>
+        <div class="art-chip chip-c" data-depth="0.05" style="transform: translate3d(12.6px, -1.825px, 0px);">01 <span>HR &amp; ADMIN FLOW</span></div>
+        <div class="art-chip chip-d" data-depth="0.07" style="transform: translate3d(17.64px, -2.555px, 0px);">✳ <span>CLEAN SYSTEM</span></div>
         <div class="art-cross cross-a">+</div>
         <div class="art-cross cross-b">+</div>
-        <svg class="art-spark" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 0 69 49 120 60 69 71 60 120 51 71 0 60 51 49Z"/></svg>
+        <svg class="art-spark" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 0 69 49 120 60 69 71 60 120 51 71 0 60 51 49Z"></path></svg>
       </div>
       <a href="#about" class="scroll-cue"><span class="scroll-cue-line"></span> SCROLL TO EXPLORE</a>
     </section>
@@ -91,84 +809,86 @@
     <!-- Ticker -->
     <section class="ticker" aria-label="Bidang fokus">
       <div class="ticker-track">
-        <span>DATA ANALYTICS & REPORTING</span><b>✳</b>
+        <span>DATA ANALYTICS &amp; REPORTING</span><b>✳</b>
         <span>BUSINESS OPERATIONS</span><b>✳</b>
-        <span>HRIS & PEOPLE ADMIN</span><b>✳</b>
+        <span>HRIS &amp; PEOPLE ADMIN</span><b>✳</b>
         <span>WORKFLOW AUTOMATION</span><b>✳</b>
         <span>DIGITAL SYSTEMS</span><b>✳</b>
-        <span>DATA ANALYTICS & REPORTING</span><b>✳</b>
+        <span>DATA ANALYTICS &amp; REPORTING</span><b>✳</b>
         <span>BUSINESS OPERATIONS</span><b>✳</b>
-        <span>HRIS & PEOPLE ADMIN</span><b>✳</b>
+        <span>HRIS &amp; PEOPLE ADMIN</span><b>✳</b>
         <span>WORKFLOW AUTOMATION</span><b>✳</b>
         <span>DIGITAL SYSTEMS</span><b>✳</b>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="about section-shell section-pad" id="about">
-      <div class="section-label reveal">
-        <span>01 / ABOUT</span>
-        <span class="label-rule"></span>
-        <span>PROFIL & PENDEKATAN KERJA</span>
-      </div>
-      <div class="about-layout">
-        <div class="about-heading reveal">
-          <h2>Berpikir sistematis.<br><em>Bekerja strategis.</em></h2>
-          
-          <!-- Container Foto Profil Interaktif -->
-          <div class="profile-photo-wrapper">
-            <div class="profile-photo-card">
-              <!-- Ganti atribut src="foto-rahmad.jpg" saat di-upload ke GitHub -->
-              <img id="profileImage" src="https://placehold.co/560x700/151e30/c8f169?text=RAHMAD+RF" alt="Foto Profil Rahmad Rizky Fauzi">
-              <div class="photo-badge-overlay">
-                <div>
-                  <strong>Rahmad Rizky Fauzi</strong>
-                  <span>S.Kom · Staff SDI UMKT</span>
+    <section class="about section-pad" id="about">
+      <div class="section-shell">
+        <div class="section-label reveal">
+          <span>01 / ABOUT</span>
+          <span class="label-rule"></span>
+          <span>PROFIL &amp; PENDEKATAN KERJA</span>
+        </div>
+        <div class="about-layout">
+          <div class="about-heading reveal">
+            <h2>Berpikir sistematis.<br><em>Bekerja strategis.</em></h2>
+            
+            <!-- Container Foto Profil Interaktif -->
+            <div class="profile-photo-wrapper">
+              <div class="profile-photo-card">
+                <!-- Ganti atribut src="foto-rahmad.jpg" saat di-upload ke GitHub -->
+                <img id="profileImage" src="https://placehold.co/560x700/151e30/c8f169?text=RAHMAD+RF" alt="Foto Profil Rahmad Rizky Fauzi">
+                <div class="photo-badge-overlay">
+                  <div>
+                    <strong>Rahmad Rizky Fauzi</strong>
+                    <span>S.Kom · Staff SDI UMKT</span>
+                  </div>
+                  <button type="button" class="photo-upload-trigger" id="testPhotoBtn" title="Coba pasang fotomu langsung dari perangkat">
+                    Uji Foto 📷
+                  </button>
+                  <input type="file" id="photoInput" accept="image/*" hidden="">
                 </div>
-                <button type="button" class="photo-upload-trigger" id="testPhotoBtn" title="Coba pasang fotomu langsung dari perangkat">
-                  Uji Foto 📷
-                </button>
-                <input type="file" id="photoInput" accept="image/*" hidden>
+              </div>
+              <div class="photo-frame"></div>
+            </div>
+            <p class="photo-helper-note">
+              <span>✳</span> Klik <strong>"Uji Foto"</strong> untuk melihat pratinjau fotomu secara langsung.
+            </p>
+          </div>
+
+          <div class="about-body reveal reveal-delay">
+            <p class="intro-text">
+              Saya memiliki latar belakang akademik <strong>S1 Teknik Informatika</strong> yang dipadukan dengan pengalaman profesional di bidang <strong>Administrasi Sumber Daya Insani (SDM)</strong>. Ketertarikan utama saya berada di titik temu antara pengelolaan data, efisiensi teknologi, dan keandalan operasional.
+            </p>
+            <p>
+              Dalam pekerjaan sehari-hari, saya menikmati proses menyulap informasi yang tersebar menjadi basis data yang bersih, terukur, dan siap pakai — mulai dari perancangan formula <em>spreadsheet</em> otomatis, visualisasi <em>dashboard</em>, dokumentasi kontrak kepegawaian, hingga penyederhanaan alur layanan administratif.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-box">
+                <h4><span>01</span> Ketelitian &amp; Struktur Data</h4>
+                <p>Menjaga validitas data melalui proses <em>data cleaning</em>, standardisasi format, dan rekonsiliasi berkala.</p>
+              </div>
+              <div class="pillar-box">
+                <h4><span>02</span> Efisiensi Alur Kerja</h4>
+                <p>Merancang template digital dan pelaporan terstruktur agar proses rutin berjalan lebih cepat dan minim kesalahan.</p>
               </div>
             </div>
-            <div class="photo-frame"></div>
-          </div>
-          <p class="photo-helper-note">
-            <span>✳</span> Klik <strong>"Uji Foto"</strong> untuk melihat pratinjau fotomu secara langsung.
-          </p>
-        </div>
 
-        <div class="about-body reveal reveal-delay">
-          <p class="intro-text">
-            Saya memiliki latar belakang akademik <strong>S1 Teknik Informatika</strong> yang dipadukan dengan pengalaman profesional di bidang <strong>Administrasi Sumber Daya Insani (SDM)</strong>. Ketertarikan utama saya berada di titik temu antara pengelolaan data, efisiensi teknologi, dan keandalan operasional.
-          </p>
-          <p>
-            Dalam pekerjaan sehari-hari, saya menikmati proses menyulap informasi yang tersebar menjadi basis data yang bersih, terukur, dan siap pakai — mulai dari perancangan formula <em>spreadsheet</em> otomatis, visualisasi <em>dashboard</em>, dokumentasi kontrak kepegawaian, hingga penyederhanaan alur layanan administratif.
-          </p>
-
-          <div class="about-pillars">
-            <div class="pillar-box">
-              <h4><span>01</span> Ketelitian & Struktur Data</h4>
-              <p>Menjaga validitas data melalui proses <em>data cleaning</em>, standardisasi format, dan rekonsiliasi berkala.</p>
-            </div>
-            <div class="pillar-box">
-              <h4><span>02</span> Efisiensi Alur Kerja</h4>
-              <p>Merancang template digital dan pelaporan terstruktur agar proses rutin berjalan lebih cepat dan minim kesalahan.</p>
-            </div>
-          </div>
-
-          <div class="about-facts">
-            <div>
-              <strong>04+</strong>
-              <span>Pilar kompetensi utama</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>Berorientasi struktur & akurasi</span>
-            </div>
-            <div>
-              <strong>24/7</strong>
-              <span>Sistem dokumentasi terorganisasi</span>
+            <div class="about-facts">
+              <div>
+                <strong>04+</strong>
+                <span>Pilar kompetensi utama</span>
+              </div>
+              <div>
+                <strong>100%</strong>
+                <span>Berorientasi struktur &amp; akurasi</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span>Sistem dokumentasi terorganisasi</span>
+              </div>
             </div>
           </div>
         </div>
@@ -176,119 +896,132 @@
     </section>
 
     <!-- Expertise Section -->
-    <section class="expertise section-shell section-pad" id="expertise">
-      <div class="section-label reveal">
-        <span>02 / EXPERTISE</span>
-        <span class="label-rule"></span>
-        <span>AREA KOMPETENSI & PERANGKAT KERJA</span>
-      </div>
-      <div class="section-heading-row reveal">
-        <h2>Ruang kerja<br><em>yang saya tekuni.</em></h2>
-        <p>Kombinasi kemampuan analitis, pemahaman logika teknologi informasi, dan ketelitian pengelolaan administrasi organisasi.</p>
-      </div>
+    <section class="expertise section-pad" id="expertise">
+      <div class="section-shell">
+        <div class="section-label reveal">
+          <span>02 / EXPERTISE</span>
+          <span class="label-rule"></span>
+          <span>AREA KOMPETENSI &amp; PERANGKAT KERJA</span>
+        </div>
+        <div class="section-heading-row reveal">
+          <h2>Ruang kerja<br><em>yang saya tekuni.</em></h2>
+          <p>Kombinasi kemampuan analitis, pemahaman logika teknologi informasi, dan ketelitian pengelolaan administrasi organisasi.</p>
+        </div>
 
-      <div class="expertise-grid">
-        <article class="expertise-card reveal">
-          <div>
-            <div class="card-topline"><span>01 / ANALYTICS</span><span class="card-symbol">↗</span></div>
-            <div class="expertise-icon icon-chart"><i></i><i></i><i></i><i></i></div>
-            <h3>Data & Reporting</h3>
-            <p>Mengumpulkan, membersihkan, mengolah, dan memvisualisasikan data menjadi laporan interaktif untuk mendukung pemantauan kinerja dan evaluasi manajemen.</p>
+        <div class="expertise-grid">
+          <article class="expertise-card reveal">
+            <div>
+              <div class="card-topline"><span>01 / ANALYTICS</span><span class="card-symbol">↗</span></div>
+              <div class="expertise-icon icon-chart"><i></i><i></i><i></i><i></i></div>
+              <h3>Data &amp; Reporting</h3>
+              <p>Mengumpulkan, membersihkan, mengolah, dan memvisualisasikan data menjadi laporan interaktif untuk mendukung pemantauan kinerja dan evaluasi manajemen.</p>
+            </div>
+            <div class="tag-list">
+              <span>Microsoft Excel</span>
+              <span>Google Sheets</span>
+              <span>Power BI</span>
+              <span>Data Cleaning</span>
+              <span>Pivot &amp; Lookup</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal reveal-delay-1">
+            <div>
+              <div class="card-topline"><span>02 / OPERATIONS</span><span class="card-symbol">↗</span></div>
+              <div class="expertise-icon icon-flow"><i></i><i></i><i></i><i></i></div>
+              <h3>Business Operations</h3>
+              <p>Menyusun alur kerja standar (SOP), pelaporan berkala, pelacakan dokumen, serta koordinasi lintas unit agar operasional harian berjalan selaras.</p>
+            </div>
+            <div class="tag-list">
+              <span>Workflow Design</span>
+              <span>SOP &amp; Dokumentasi</span>
+              <span>Process Tracking</span>
+              <span>Reporting</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal reveal-delay-2">
+            <div>
+              <div class="card-topline"><span>03 / PEOPLE</span><span class="card-symbol">↗</span></div>
+              <div class="expertise-icon icon-people"><i></i><i></i><i></i></div>
+              <h3>HR &amp; People Operations</h3>
+              <p>Mengelola administrasi siklus karyawan: pembaruan database kepegawaian, administrasi rekrutmen, pemantauan masa kontrak, dan surat keputusan.</p>
+            </div>
+            <div class="tag-list">
+              <span>HR Administration</span>
+              <span>Database SDM</span>
+              <span>Rekrutmen</span>
+              <span>Manajemen Kontrak</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal reveal-delay-3">
+            <div>
+              <div class="card-topline"><span>04 / TECHNOLOGY</span><span class="card-symbol">↗</span></div>
+              <div class="expertise-icon icon-code"><span>{ }</span></div>
+              <h3>Digital Tools &amp; Systems</h3>
+              <p>Memanfaatkan fondasi Teknik Informatika untuk membangun antarmuka web, mengelola publikasi kanal digital unit, dan mengotomatisasi pekerjaan administrasi.</p>
+            </div>
+            <div class="tag-list">
+              <span>HTML / CSS / JS</span>
+              <span>Relational Database</span>
+              <span>CMS &amp; Web Admin</span>
+              <span>Digital Forms</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="tools-bar reveal">
+          <div class="tools-bar-title">
+            <i></i> DAILY ECOSYSTEM &amp; TOOLS
           </div>
-          <div class="tag-list">
-            <span>Microsoft Excel</span>
-            <span>Google Sheets</span>
+          <div class="tools-pills">
+            <span>Advanced Excel</span>
+            <span>Google Workspace</span>
             <span>Power BI</span>
-            <span>Data Cleaning</span>
-            <span>Pivot & Lookup</span>
-          </div>
-        </article>
-
-        <article class="expertise-card reveal reveal-delay-1">
-          <div>
-            <div class="card-topline"><span>02 / OPERATIONS</span><span class="card-symbol">↗</span></div>
-            <div class="expertise-icon icon-flow"><i></i><i></i><i></i><i></i></div>
-            <h3>Business Operations</h3>
-            <p>Menyusun alur kerja standar (SOP), pelaporan berkala, pelacakan dokumen, serta koordinasi lintas unit agar operasional harian berjalan selaras.</p>
-          </div>
-          <div class="tag-list">
-            <span>Workflow Design</span>
-            <span>SOP & Dokumentasi</span>
-            <span>Process Tracking</span>
-            <span>Reporting</span>
-          </div>
-        </article>
-
-        <article class="expertise-card reveal reveal-delay-2">
-          <div>
-            <div class="card-topline"><span>03 / PEOPLE</span><span class="card-symbol">↗</span></div>
-            <div class="expertise-icon icon-people"><i></i><i></i><i></i></div>
-            <h3>HR & People Operations</h3>
-            <p>Mengelola administrasi siklus karyawan: pembaruan database kepegawaian, administrasi rekrutmen, pemantauan masa kontrak, dan surat keputusan.</p>
-          </div>
-          <div class="tag-list">
-            <span>HR Administration</span>
-            <span>Database SDM</span>
-            <span>Rekrutmen</span>
-            <span>Manajemen Kontrak</span>
-          </div>
-        </article>
-
-        <article class="expertise-card reveal reveal-delay-3">
-          <div>
-            <div class="card-topline"><span>04 / TECHNOLOGY</span><span class="card-symbol">↗</span></div>
-            <div class="expertise-icon icon-code"><span>{ }</span></div>
-            <h3>Digital Tools & Systems</h3>
-            <p>Memanfaatkan fondasi Teknik Informatika untuk membangun antarmuka web, mengelola publikasi kanal digital unit, dan mengotomatisasi pekerjaan administrasi.</p>
-          </div>
-          <div class="tag-list">
-            <span>HTML / CSS / JS</span>
-            <span>Relational Database</span>
-            <span>CMS & Web Admin</span>
-            <span>Digital Forms</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="tools-bar reveal">
-        <div class="tools-bar-title">
-          <i></i> DAILY ECOSYSTEM & TOOLS
-        </div>
-        <div class="tools-pills">
-          <span>Advanced Excel</span>
-          <span>Google Workspace</span>
-          <span>Power BI</span>
-          <span>SQL / Database</span>
-          <span>HTML5 & CSS3</span>
-          <span>JavaScript</span>
-          <span>HRIS Management</span>
-          <span>Git & GitHub</span>
-        </div>
-      </div>
-
-      <!-- Interactive Competency & Impact Simulator -->
-      <div class="interactive-lab reveal" aria-label="Simulasi Fokus & Dampak Kerja">
-        <div class="lab-header">
-          <div class="lab-title-wrap">
-            <span>INTERACTIVE CAPABILITY MATRIX</span>
-            <h3>Simulasi Fokus & Output Kerja</h3>
-          </div>
-          <div class="lab-tabs" role="tablist">
-            <button type="button" class="lab-tab active" data-lab="data" role="tab" aria-selected="true">01 · Data & Reporting</button>
-            <button type="button" class="lab-tab" data-lab="hr" role="tab" aria-selected="false">02 · HR & People Admin</button>
-            <button type="button" class="lab-tab" data-lab="ops" role="tab" aria-selected="false">03 · Digital Workflow</button>
+            <span>SQL / Database</span>
+            <span>HTML5 &amp; CSS3</span>
+            <span>JavaScript</span>
+            <span>HRIS Management</span>
+            <span>Git &amp; GitHub</span>
           </div>
         </div>
-        <div class="lab-body">
-          <div class="lab-bars" id="labBarsContainer">
-            <!-- Diisi dinamis oleh JS -->
+
+        <!-- Interactive Competency & Impact Simulator -->
+        <div class="interactive-lab reveal" aria-label="Simulasi Fokus &amp; Dampak Kerja">
+          <div class="lab-header">
+            <div class="lab-title-wrap">
+              <span>INTERACTIVE CAPABILITY MATRIX</span>
+              <h3>Simulasi Fokus &amp; Output Kerja</h3>
+            </div>
+            <div class="lab-tabs" role="tablist">
+              <button type="button" class="lab-tab active" data-lab="data" role="tab" aria-selected="true">01 · Data &amp; Reporting</button>
+              <button type="button" class="lab-tab" data-lab="hr" role="tab" aria-selected="false">02 · HR &amp; People Admin</button>
+              <button type="button" class="lab-tab" data-lab="ops" role="tab" aria-selected="false">03 · Digital Workflow</button>
+            </div>
           </div>
-          <div class="lab-summary-card">
-            <div class="lab-kpi-big" id="labKpiValue">98.5%</div>
-            <span class="lab-kpi-caption" id="labKpiLabel">TINGKAT KONSISTENSI STRUKTUR DATA</span>
-            <p id="labDescription">Mengubah data mentah dari berbagai sumber menjadi laporan bersih dan terukur yang siap disajikan kepada manajemen.</p>
-            <div class="lab-deliverable" id="labDeliverable">
-              <strong>Output Utama:</strong> Dashboard KPI, Pivot Otomatis, Rekapitulasi Berkala
+          <div class="lab-body">
+            <div class="lab-bars" id="labBarsContainer">
+          <div class="lab-bar-item">
+            <div class="lab-bar-top"><span>Data Cleaning &amp; Standardisasi Format</span><b>96%</b></div>
+            <div class="lab-bar-track"><div class="lab-bar-fill" style="width: 96%;" data-target="96%"></div></div>
+          </div>
+        
+          <div class="lab-bar-item">
+            <div class="lab-bar-top"><span>Penyusunan Laporan &amp; Pivot (Excel / Sheets)</span><b>94%</b></div>
+            <div class="lab-bar-track"><div class="lab-bar-fill" style="width: 94%;" data-target="94%"></div></div>
+          </div>
+        
+          <div class="lab-bar-item">
+            <div class="lab-bar-top"><span>Visualisasi Dashboard &amp; Grafik (Power BI)</span><b>88%</b></div>
+            <div class="lab-bar-track"><div class="lab-bar-fill" style="width: 88%;" data-target="88%"></div></div>
+          </div>
+        </div>
+            <div class="lab-summary-card">
+              <div class="lab-kpi-big" id="labKpiValue">98.5%</div>
+              <span class="lab-kpi-caption" id="labKpiLabel">TINGKAT KONSISTENSI STRUKTUR DATA</span>
+              <p id="labDescription">Mengubah data mentah dari berbagai sumber menjadi laporan bersih dan terukur yang siap disajikan kepada manajemen.</p>
+              <div class="lab-deliverable" id="labDeliverable"><strong>Output Utama:</strong> Dashboard KPI, Pivot Otomatis, Rekapitulasi Berkala</div>
             </div>
           </div>
         </div>
@@ -296,271 +1029,275 @@
     </section>
 
     <!-- Work / Selected Projects Section -->
-    <section class="work section-shell section-pad" id="work">
-      <div class="section-label reveal">
-        <span>03 / SELECTED WORK</span>
-        <span class="label-rule"></span>
-        <span>STUDI KASUS & EKSPLORASI PROYEK</span>
-      </div>
-      <div class="section-heading-row work-heading reveal">
-        <h2>Ide yang menjadi<br><em>solusi nyata.</em></h2>
-        <p>Klik pada salah satu kartu proyek di bawah untuk membaca detail latar belakang masalah, pendekatan solusi, dan dampaknya.</p>
-      </div>
-
-      <div class="project-toolbar reveal">
-        <span class="toolbar-caption">FILTER KATEGORI PROYEK</span>
-        <div class="filter-group" role="group" aria-label="Filter proyek">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua <small>04</small></button>
-          <button class="filter-btn" data-filter="data" aria-pressed="false">Data & BI <small>01</small></button>
-          <button class="filter-btn" data-filter="hr" aria-pressed="false">HR & People <small>01</small></button>
-          <button class="filter-btn" data-filter="operations" aria-pressed="false">Operations <small>01</small></button>
-          <button class="filter-btn" data-filter="systems" aria-pressed="false">Digital Systems <small>01</small></button>
+    <section class="work section-pad" id="work">
+      <div class="section-shell">
+        <div class="section-label reveal">
+          <span>03 / SELECTED WORK</span>
+          <span class="label-rule"></span>
+          <span>STUDI KASUS &amp; EKSPLORASI PROYEK</span>
         </div>
-      </div>
+        <div class="section-heading-row work-heading reveal">
+          <h2>Ide yang menjadi<br><em>solusi nyata.</em></h2>
+          <p>Klik pada salah satu kartu proyek di bawah untuk membaca detail latar belakang masalah, pendekatan solusi, dan dampaknya.</p>
+        </div>
 
-      <div class="project-grid" id="projectGrid">
-        <!-- Project 1 -->
-        <article class="project-card reveal" data-category="data" data-project-id="proj-data" tabindex="0" role="button" aria-label="Buka detail proyek Executive Data & Reporting Dashboard">
-          <div class="project-visual visual-dashboard">
-            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
-            <div class="visual-window">
-              <div class="window-head"><span></span><span></span><span></span><b>PERFORMANCE & KPI OVERVIEW</b></div>
-              <div class="dash-content">
-                <div class="dash-sidebar"></div>
-                <div class="dash-main">
-                  <div class="dash-kpis"><i></i><i></i><i></i></div>
-                  <div class="dash-chart">
-                    <div class="chart-bars">
-                      <i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i>
-                      <i style="height:76%"></i><i style="height:62%"></i><i style="height:92%"></i><i style="height:74%"></i>
+        <div class="project-toolbar reveal">
+          <span class="toolbar-caption">FILTER KATEGORI PROYEK</span>
+          <div class="filter-group" role="group" aria-label="Filter proyek">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua <small>04</small></button>
+            <button class="filter-btn" data-filter="data" aria-pressed="false">Data &amp; BI <small>01</small></button>
+            <button class="filter-btn" data-filter="hr" aria-pressed="false">HR &amp; People <small>01</small></button>
+            <button class="filter-btn" data-filter="operations" aria-pressed="false">Operations <small>01</small></button>
+            <button class="filter-btn" data-filter="systems" aria-pressed="false">Digital Systems <small>01</small></button>
+          </div>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+          <!-- Project 1 -->
+          <article class="project-card reveal" data-category="data" data-project-id="proj-data" tabindex="0" role="button" aria-label="Buka detail proyek Executive Data &amp; Reporting Dashboard">
+            <div class="project-visual visual-dashboard">
+              <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+              <div class="visual-window">
+                <div class="window-head"><span></span><span></span><span></span><b>PERFORMANCE &amp; KPI OVERVIEW</b></div>
+                <div class="dash-content">
+                  <div class="dash-sidebar"></div>
+                  <div class="dash-main">
+                    <div class="dash-kpis"><i></i><i></i><i></i></div>
+                    <div class="dash-chart">
+                      <div class="chart-bars">
+                        <i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i>
+                        <i style="height:76%"></i><i style="height:62%"></i><i style="height:92%"></i><i style="height:74%"></i>
+                      </div>
+                      <div class="chart-line"></div>
                     </div>
-                    <div class="chart-line"></div>
+                    <div class="dash-bottom"><i></i><i></i></div>
                   </div>
-                  <div class="dash-bottom"><i></i><i></i></div>
                 </div>
               </div>
+              <span class="visual-index">01 / DATA ANALYTICS</span>
             </div>
-            <span class="visual-index">01 / DATA ANALYTICS</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <div class="project-meta"><span>DATA & REPORTING</span><span>CASE STUDY 01</span></div>
-              <h3>Executive Data & Reporting Dashboard</h3>
-              <p>Perancangan dashboard interaktif dan rekapitulasi metrik utama untuk mempercepat pemantauan tren bulanan, distribusi sumber daya, dan akurasi pelaporan manajemen.</p>
-            </div>
-            <div class="project-foot">
-              <div class="tag-list"><span>Power BI</span><span>Excel Automation</span><span>Data Cleaning</span></div>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card reveal reveal-delay-1" data-category="hr" data-project-id="proj-hr" tabindex="0" role="button" aria-label="Buka detail proyek Sistem Pemantauan Data & Kontrak SDM">
-          <div class="project-visual visual-people">
-            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
-            <div class="people-board">
-              <div class="people-title">PEOPLE<br><em>DIRECTORY</em></div>
-              <div class="people-count">100<span>%</span></div>
-              <div class="people-caption">CONTRACT TRACKING<br>& HR DATA FLOW</div>
-              <div class="people-nodes"><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-            <span class="visual-index">02 / HR OPERATIONS</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <div class="project-meta"><span>HR & PEOPLE ADMIN</span><span>CASE STUDY 02</span></div>
-              <h3>Sistem Pemantauan Data & Kontrak SDM</h3>
-              <p>Penataan basis data kepegawaian terpusat lengkap dengan indikator masa berlaku kontrak kerja, pelacakan tahapan rekrutmen, serta pengarsipan dokumen terstruktur.</p>
-            </div>
-            <div class="project-foot">
-              <div class="tag-list"><span>HR Database</span><span>Contract Tracker</span><span>Recruitment</span></div>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card reveal reveal-delay-2" data-category="operations" data-project-id="proj-ops" tabindex="0" role="button" aria-label="Buka detail proyek Digital Workflow & Document Tracker">
-          <div class="project-visual visual-system">
-            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
-            <div class="system-stack">
-              <div class="stack-card stack-back">01 · FORM INPUT & VALIDATION <b>↗</b></div>
-              <div class="stack-card stack-mid">02 · AUTOMATED ROUTING <b>↗</b></div>
-              <div class="stack-card stack-front">03 · STRUCTURED REPORT <b>✳</b></div>
-            </div>
-            <span class="visual-index">03 / WORKFLOW</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <div class="project-meta"><span>BUSINESS OPERATIONS</span><span>CASE STUDY 03</span></div>
-              <h3>Digital Workflow & Document Tracker</h3>
-              <p>Standardisasi alur pengajuan dan pelacakan surat/dokumen operasional menggunakan template spreadsheet pintar untuk memangkas waktu pencarian arsip.</p>
-            </div>
-            <div class="project-foot">
-              <div class="tag-list"><span>Google Sheets</span><span>Workflow SOP</span><span>Process Improvement</span></div>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="project-card reveal reveal-delay-3" data-category="systems" data-project-id="proj-web" tabindex="0" role="button" aria-label="Buka detail proyek Portal Informasi & Kanal Digital Unit">
-          <div class="project-visual visual-portal">
-            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
-            <div class="portal-mockup">
-              <div class="portal-top"><span>DIGITAL PORTAL SYSTEM</span><i></i></div>
-              <div class="portal-grid">
-                <div class="portal-box"><strong>INFO LAYANAN</strong>Terintegrasi</div>
-                <div class="portal-box"><strong>PUBLIKASI</strong>Responsif</div>
+            <div class="project-info">
+              <div>
+                <div class="project-meta"><span>DATA &amp; REPORTING</span><span>CASE STUDY 01</span></div>
+                <h3>Executive Data &amp; Reporting Dashboard</h3>
+                <p>Perancangan dashboard interaktif dan rekapitulasi metrik utama untuk mempercepat pemantauan tren bulanan, distribusi sumber daya, dan akurasi pelaporan manajemen.</p>
               </div>
-              <div class="portal-bar"><span></span></div>
+              <div class="project-foot">
+                <div class="tag-list"><span>Power BI</span><span>Excel Automation</span><span>Data Cleaning</span></div>
+                <span class="project-arrow">↗</span>
+              </div>
             </div>
-            <span class="visual-index">04 / DIGITAL SYSTEM</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <div class="project-meta"><span>WEB & INFORMATION SYSTEM</span><span>CASE STUDY 04</span></div>
-              <h3>Portal Informasi & Kanal Digital Unit</h3>
-              <p>Pengelolaan pembaruan informasi pada kanal digital organisasi serta pengembangan antarmuka web statis yang bersih, cepat, dan mudah diakses oleh sivitas/pengguna.</p>
-            </div>
-            <div class="project-foot">
-              <div class="tag-list"><span>HTML / CSS / JS</span><span>UI Structure</span><span>Web Publishing</span></div>
-              <span class="project-arrow">↗</span>
-            </div>
-          </div>
-        </article>
-      </div>
+          </article>
 
-      <p class="project-note">
-        <span>✳</span> Tip: Klik pada kartu proyek mana saja untuk membuka jendela rincian studi kasus.
-      </p>
+          <!-- Project 2 -->
+          <article class="project-card reveal reveal-delay-1" data-category="hr" data-project-id="proj-hr" tabindex="0" role="button" aria-label="Buka detail proyek Sistem Pemantauan Data &amp; Kontrak SDM">
+            <div class="project-visual visual-people">
+              <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+              <div class="people-board">
+                <div class="people-title">PEOPLE<br><em>DIRECTORY</em></div>
+                <div class="people-count">100<span>%</span></div>
+                <div class="people-caption">CONTRACT TRACKING<br>&amp; HR DATA FLOW</div>
+                <div class="people-nodes"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="visual-index">02 / HR OPERATIONS</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <div class="project-meta"><span>HR &amp; PEOPLE ADMIN</span><span>CASE STUDY 02</span></div>
+                <h3>Sistem Pemantauan Data &amp; Kontrak SDM</h3>
+                <p>Penataan basis data kepegawaian terpusat lengkap dengan indikator masa berlaku kontrak kerja, pelacakan tahapan rekrutmen, serta pengarsipan dokumen terstruktur.</p>
+              </div>
+              <div class="project-foot">
+                <div class="tag-list"><span>HR Database</span><span>Contract Tracker</span><span>Recruitment</span></div>
+                <span class="project-arrow">↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal reveal-delay-2" data-category="operations" data-project-id="proj-ops" tabindex="0" role="button" aria-label="Buka detail proyek Digital Workflow &amp; Document Tracker">
+            <div class="project-visual visual-system">
+              <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+              <div class="system-stack">
+                <div class="stack-card stack-back">01 · FORM INPUT &amp; VALIDATION <b>↗</b></div>
+                <div class="stack-card stack-mid">02 · AUTOMATED ROUTING <b>↗</b></div>
+                <div class="stack-card stack-front">03 · STRUCTURED REPORT <b>✳</b></div>
+              </div>
+              <span class="visual-index">03 / WORKFLOW</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <div class="project-meta"><span>BUSINESS OPERATIONS</span><span>CASE STUDY 03</span></div>
+                <h3>Digital Workflow &amp; Document Tracker</h3>
+                <p>Standardisasi alur pengajuan dan pelacakan surat/dokumen operasional menggunakan template spreadsheet pintar untuk memangkas waktu pencarian arsip.</p>
+              </div>
+              <div class="project-foot">
+                <div class="tag-list"><span>Google Sheets</span><span>Workflow SOP</span><span>Process Improvement</span></div>
+                <span class="project-arrow">↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal reveal-delay-3" data-category="systems" data-project-id="proj-web" tabindex="0" role="button" aria-label="Buka detail proyek Portal Informasi &amp; Kanal Digital Unit">
+            <div class="project-visual visual-portal">
+              <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+              <div class="portal-mockup">
+                <div class="portal-top"><span>DIGITAL PORTAL SYSTEM</span><i></i></div>
+                <div class="portal-grid">
+                  <div class="portal-box"><strong>INFO LAYANAN</strong>Terintegrasi</div>
+                  <div class="portal-box"><strong>PUBLIKASI</strong>Responsif</div>
+                </div>
+                <div class="portal-bar"><span></span></div>
+              </div>
+              <span class="visual-index">04 / DIGITAL SYSTEM</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <div class="project-meta"><span>WEB &amp; INFORMATION SYSTEM</span><span>CASE STUDY 04</span></div>
+                <h3>Portal Informasi &amp; Kanal Digital Unit</h3>
+                <p>Pengelolaan pembaruan informasi pada kanal digital organisasi serta pengembangan antarmuka web statis yang bersih, cepat, dan mudah diakses oleh sivitas/pengguna.</p>
+              </div>
+              <div class="project-foot">
+                <div class="tag-list"><span>HTML / CSS / JS</span><span>UI Structure</span><span>Web Publishing</span></div>
+                <span class="project-arrow">↗</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="project-note">
+          <span>✳</span> Tip: Klik pada kartu proyek mana saja untuk membuka jendela rincian studi kasus.
+        </p>
+      </div>
     </section>
 
     <!-- Experience Section -->
-    <section class="experience section-shell section-pad" id="experience">
-      <div class="section-label reveal">
-        <span>04 / EXPERIENCE</span>
-        <span class="label-rule"></span>
-        <span>PERJALANAN PROFESIONAL & AKADEMIK</span>
-      </div>
-      <div class="experience-layout">
-        <div class="experience-intro reveal">
-          <h2>Belajar dari<br><em>proses nyata.</em></h2>
-          <p>Pengalaman langsung di lingkungan institusi membentuk ketajaman saya dalam menjaga akurasi data, kerahasiaan administrasi, dan komunikasi antar-unit.</p>
+    <section class="experience section-pad" id="experience">
+      <div class="section-shell">
+        <div class="section-label reveal">
+          <span>04 / EXPERIENCE</span>
+          <span class="label-rule"></span>
+          <span>PERJALANAN PROFESIONAL &amp; AKADEMIK</span>
         </div>
-
-        <div class="timeline reveal reveal-delay">
-          <div class="timeline-item">
-            <div class="timeline-date">DES 2024 — SEKARANG</div>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-type">PROFESSIONAL EXPERIENCE</span>
-              <h3>Staff — Biro Sumber Daya Insani (SDI)</h3>
-              <p class="timeline-org">Universitas Muhammadiyah Kalimantan Timur (UMKT) · Samarinda</p>
-              <ul class="timeline-list">
-                <li>Mengelola dan memperbarui basis data kepegawaian agar selalu akurat serta siap digunakan untuk kebutuhan pelaporan institusi.</li>
-                <li>Mendukung koordinasi proses rekrutmen, seleksi, hingga penyusunan dokumentasi kontrak kerja pegawai/dosen.</li>
-                <li>Menyusun rekapitulasi laporan administrasi SDM dan memastikan kelengkapan arsip fisik maupun digital.</li>
-                <li>Mengelola pembaruan informasi dan publikasi layanan pada kanal digital unit Biro SDI.</li>
-              </ul>
-              <div class="tag-list">
-                <span>HR Administration</span>
-                <span>Data Management</span>
-                <span>Recruitment Support</span>
-                <span>Digital Publishing</span>
-              </div>
-            </div>
+        <div class="experience-layout">
+          <div class="experience-intro reveal">
+            <h2>Belajar dari<br><em>proses nyata.</em></h2>
+            <p>Pengalaman langsung di lingkungan institusi membentuk ketajaman saya dalam menjaga akurasi data, kerahasiaan administrasi, dan komunikasi antar-unit.</p>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">PENDIDIKAN TINGGI</div>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-type">ACADEMIC BACKGROUND</span>
-              <h3>Sarjana Komputer (S1) — Teknik Informatika</h3>
-              <p class="timeline-org">Fokus: Sistem Informasi, Pengolahan Data & Pengembangan Web</p>
-              <p>Membangun fondasi pemikiran algoritmis, perancangan basis data relasional, rekayasa perangkat lunak, serta pemanfaatan teknologi digital untuk memecahkan masalah operasional secara efisien.</p>
-              <div class="tag-list">
-                <span>Algorithms & Logic</span>
-                <span>Database Systems</span>
-                <span>Web Technologies</span>
-                <span>System Analysis</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4-Step Working Methodology -->
-      <div class="workflow-strip reveal">
-        <div class="workflow-strip-head">
-          <h3>Kerangka Kerja & Pendekatan</h3>
-          <span>HOW I WORK — 01 TO 04</span>
-        </div>
-        <div class="workflow-steps">
-          <div class="workflow-step">
-            <b>STEP 01</b>
-            <h4>Audit & Pemetaan</h4>
-            <p>Memahami kebutuhan pengguna, mengumpulkan sumber data yang tersebar, dan mengidentifikasi hambatan alur kerja.</p>
-          </div>
-          <div class="workflow-step">
-            <b>STEP 02</b>
-            <h4>Strukturisasi & Cleaning</h4>
-            <p>Merapikan format data, menghapus duplikasi, dan merancang skema tabel/dokumen yang konsisten.</p>
-          </div>
-          <div class="workflow-step">
-            <b>STEP 03</b>
-            <h4>Otomatisasi & Visualisasi</h4>
-            <p>Membangun formula, template otomatis, atau dashboard ringkas agar informasi mudah dibaca sekilas.</p>
-          </div>
-          <div class="workflow-step">
-            <b>STEP 04</b>
-            <h4>Dokumentasi & Evaluasi</h4>
-            <p>Menyusun panduan penggunaan (SOP) yang jelas agar sistem mudah dijalankan secara berkelanjutan oleh tim.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Recruiter & Collaboration Quick FAQ -->
-      <div class="faq-section reveal">
-        <div class="faq-grid">
-          <div class="faq-intro">
-            <span style="font: 10px var(--mono); color: var(--lime-dark); letter-spacing: 0.12em; display:block; margin-bottom:6px;">QUICK ANSWERS</span>
-            <h3>Informasi Cepat untuk Rekruter & Mitra</h3>
-            <p>Ringkasan terkait fokus peran, kesiapan kolaborasi, dan pendekatan kerja sehari-hari.</p>
-          </div>
-          <div class="faq-list" id="faqList">
-            <div class="faq-item open">
-              <button type="button" class="faq-question" aria-expanded="true">
-                <span>Peran atau bidang apa yang menjadi fokus utama Rahmad?</span>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer" style="max-height: 160px;">
-                <div class="faq-answer-inner">
-                  Fokus utama saya meliputi <strong>Data & Reporting Analyst</strong>, <strong>HR Administration / HRIS Specialist</strong>, <strong>Business Operations</strong>, serta <strong>IT / Digital Administrative Support</strong> yang membutuhkan kombinasi ketelitian data dan pemanfaatan teknologi.
+          <div class="timeline reveal reveal-delay">
+            <div class="timeline-item">
+              <div class="timeline-date">DES 2024 — SEKARANG</div>
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-type">PROFESSIONAL EXPERIENCE</span>
+                <h3>Staff — Biro Sumber Daya Insani (SDI)</h3>
+                <p class="timeline-org">Universitas Muhammadiyah Kalimantan Timur (UMKT) · Samarinda</p>
+                <ul class="timeline-list">
+                  <li>Mengelola dan memperbarui basis data kepegawaian agar selalu akurat serta siap digunakan untuk kebutuhan pelaporan institusi.</li>
+                  <li>Mendukung koordinasi proses rekrutmen, seleksi, hingga penyusunan dokumentasi kontrak kerja pegawai/dosen.</li>
+                  <li>Menyusun rekapitulasi laporan administrasi SDM dan memastikan kelengkapan arsip fisik maupun digital.</li>
+                  <li>Mengelola pembaruan informasi dan publikasi layanan pada kanal digital unit Biro SDI.</li>
+                </ul>
+                <div class="tag-list">
+                  <span>HR Administration</span>
+                  <span>Data Management</span>
+                  <span>Recruitment Support</span>
+                  <span>Digital Publishing</span>
                 </div>
               </div>
             </div>
-            <div class="faq-item">
-              <button type="button" class="faq-question" aria-expanded="false">
-                <span>Bagaimana latar belakang Teknik Informatika membantu pekerjaan HR & Operasional?</span>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-inner">
-                  Latar belakang S1 Teknik Informatika membantu saya berpikir secara terstruktur (logika basis data & sistem). Saya tidak hanya mencatat data secara manual, tetapi merancang formula otomatis, mencegah duplikasi data, dan merapikan alur dokumen digital agar lebih efisien.
+
+            <div class="timeline-item">
+              <div class="timeline-date">PENDIDIKAN TINGGI</div>
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-type">ACADEMIC BACKGROUND</span>
+                <h3>Sarjana Komputer (S1) — Teknik Informatika</h3>
+                <p class="timeline-org">Fokus: Sistem Informasi, Pengolahan Data &amp; Pengembangan Web</p>
+                <p>Membangun fondasi pemikiran algoritmis, perancangan basis data relasional, rekayasa perangkat lunak, serta pemanfaatan teknologi digital untuk memecahkan masalah operasional secara efisien.</p>
+                <div class="tag-list">
+                  <span>Algorithms &amp; Logic</span>
+                  <span>Database Systems</span>
+                  <span>Web Technologies</span>
+                  <span>System Analysis</span>
                 </div>
               </div>
             </div>
-            <div class="faq-item">
-              <button type="button" class="faq-question" aria-expanded="false">
-                <span>Apakah terbuka untuk kolaborasi proyek atau peluang baru?</span>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <div class="faq-answer-inner">
-                  Ya, saya terbuka untuk diskusi profesional, proyek peningkatan sistem/data, maupun peluang karier baik secara <em>On-site</em> (Samarinda & sekitarnya), <em>Hybrid</em>, maupun <em>Remote</em>.
+          </div>
+        </div>
+
+        <!-- 4-Step Working Methodology -->
+        <div class="workflow-strip reveal">
+          <div class="workflow-strip-head">
+            <h3>Kerangka Kerja &amp; Pendekatan</h3>
+            <span>HOW I WORK — 01 TO 04</span>
+          </div>
+          <div class="workflow-steps">
+            <div class="workflow-step">
+              <b>STEP 01</b>
+              <h4>Audit &amp; Pemetaan</h4>
+              <p>Memahami kebutuhan pengguna, mengumpulkan sumber data yang tersebar, dan mengidentifikasi hambatan alur kerja.</p>
+            </div>
+            <div class="workflow-step">
+              <b>STEP 02</b>
+              <h4>Strukturisasi &amp; Cleaning</h4>
+              <p>Merapikan format data, menghapus duplikasi, dan merancang skema tabel/dokumen yang konsisten.</p>
+            </div>
+            <div class="workflow-step">
+              <b>STEP 03</b>
+              <h4>Otomatisasi &amp; Visualisasi</h4>
+              <p>Membangun formula, template otomatis, atau dashboard ringkas agar informasi mudah dibaca sekilas.</p>
+            </div>
+            <div class="workflow-step">
+              <b>STEP 04</b>
+              <h4>Dokumentasi &amp; Evaluasi</h4>
+              <p>Menyusun panduan penggunaan (SOP) yang jelas agar sistem mudah dijalankan secara berkelanjutan oleh tim.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recruiter & Collaboration Quick FAQ -->
+        <div class="faq-section reveal">
+          <div class="faq-grid">
+            <div class="faq-intro">
+              <span style="font: 10px var(--mono); color: var(--lime-dark); letter-spacing: 0.12em; display:block; margin-bottom:6px;">QUICK ANSWERS</span>
+              <h3>Informasi Cepat untuk Rekruter &amp; Mitra</h3>
+              <p>Ringkasan terkait fokus peran, kesiapan kolaborasi, dan pendekatan kerja sehari-hari.</p>
+            </div>
+            <div class="faq-list" id="faqList">
+              <div class="faq-item open">
+                <button type="button" class="faq-question" aria-expanded="true">
+                  <span>Peran atau bidang apa yang menjadi fokus utama Rahmad?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" style="max-height: 160px;">
+                  <div class="faq-answer-inner">
+                    Fokus utama saya meliputi <strong>Data &amp; Reporting Analyst</strong>, <strong>HR Administration / HRIS Specialist</strong>, <strong>Business Operations</strong>, serta <strong>IT / Digital Administrative Support</strong> yang membutuhkan kombinasi ketelitian data dan pemanfaatan teknologi.
+                  </div>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                  <span>Bagaimana latar belakang Teknik Informatika membantu pekerjaan HR &amp; Operasional?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    Latar belakang S1 Teknik Informatika membantu saya berpikir secara terstruktur (logika basis data &amp; sistem). Saya tidak hanya mencatat data secara manual, tetapi merancang formula otomatis, mencegah duplikasi data, dan merapikan alur dokumen digital agar lebih efisien.
+                  </div>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                  <span>Apakah terbuka untuk kolaborasi proyek atau peluang baru?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <div class="faq-answer-inner">
+                    Ya, saya terbuka untuk diskusi profesional, proyek peningkatan sistem/data, maupun peluang karier baik secara <em>On-site</em> (Samarinda &amp; sekitarnya), <em>Hybrid</em>, maupun <em>Remote</em>.
+                  </div>
                 </div>
               </div>
             </div>
@@ -570,24 +1307,26 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact section-shell" id="contact">
-      <div class="contact-panel reveal">
-        <div class="contact-orbit" aria-hidden="true"></div>
-        <div class="contact-content">
-          <p class="eyebrow"><span class="status-dot"></span> LET'S CONNECT & COLLABORATE</p>
-          <h2>Mari bangun sesuatu<br><em>yang berdampak.</em></h2>
-          <p>Terbuka untuk diskusi, kolaborasi proyek, maupun peluang profesional di bidang Data & Reporting, Business Operations, HR Administration, dan Sistem Digital.</p>
-          <div class="contact-actions">
-            <button class="button button-light" type="button" id="openQuickMsgBtn">Tulis pesan langsung <span>↗</span></button>
-            <button class="button-dark-outline" id="copyEmail" type="button">Salin alamat email <span>⧉</span></button>
+    <section class="contact" id="contact">
+      <div class="section-shell">
+        <div class="contact-panel reveal">
+          <div class="contact-orbit" aria-hidden="true"></div>
+          <div class="contact-content">
+            <p class="eyebrow"><span class="status-dot"></span> LET'S CONNECT &amp; COLLABORATE</p>
+            <h2>Mari bangun sesuatu<br><em>yang berdampak.</em></h2>
+            <p>Terbuka untuk diskusi, kolaborasi proyek, maupun peluang profesional di bidang Data &amp; Reporting, Business Operations, HR Administration, dan Sistem Digital.</p>
+            <div class="contact-actions">
+              <button class="button button-light" type="button" id="openQuickMsgBtn">Tulis pesan langsung <span>↗</span></button>
+              <button class="button-dark-outline" id="copyEmail" type="button">Salin alamat email <span>⧉</span></button>
+            </div>
+            <!-- Container Link Sosial Media -->
+            <div class="contact-socials" id="contactSocials"></div>
+            <p class="contact-hint" id="contactHint">Email aktif: <code>rahmadrizkyfauzi@email.com</code> · Siap berdiskusi untuk kolaborasi maupun peluang karier.</p>
           </div>
-          <!-- Container Link Sosial Media -->
-          <div class="contact-socials" id="contactSocials"></div>
-          <p class="contact-hint" id="contactHint"></p>
-        </div>
-        <div class="contact-stamp">
-          <span>R</span>
-          <small>OPEN FOR<br>OPPORTUNITIES</small>
+          <div class="contact-stamp">
+            <span>R</span>
+            <small>OPEN FOR<br>OPPORTUNITIES</small>
+          </div>
         </div>
       </div>
     </section>
@@ -614,23 +1353,23 @@
           <span class="modal-eyebrow" id="modalCategory">CATEGORY</span>
           <h3 id="modalTitle">Judul Proyek</h3>
         </div>
-        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+        <button type="button" class="modal-close" data-close-modal="" aria-label="Tutup jendela">✕</button>
       </div>
       <div class="modal-metrics" id="modalMetrics"></div>
       <div class="modal-section">
-        <h4>01 / Tantangan & Latar Belakang</h4>
+        <h4>01 / Tantangan &amp; Latar Belakang</h4>
         <p id="modalChallenge"></p>
       </div>
       <div class="modal-section">
-        <h4>02 / Solusi & Pendekatan</h4>
+        <h4>02 / Solusi &amp; Pendekatan</h4>
         <p id="modalSolution"></p>
       </div>
       <div class="modal-section">
-        <h4>03 / Hasil & Dampak Operasional</h4>
+        <h4>03 / Hasil &amp; Dampak Operasional</h4>
         <p id="modalOutput"></p>
       </div>
       <div class="modal-section">
-        <h4>04 / Komponen & Deliverables</h4>
+        <h4>04 / Komponen &amp; Deliverables</h4>
         <div class="modal-deliverables" id="modalDeliverables"></div>
       </div>
       <div class="tag-list" id="modalTags"></div>
@@ -649,25 +1388,25 @@
           <span class="modal-eyebrow">DIRECT MESSAGE COMPOSER</span>
           <h3>Hubungi Rahmad Rizky Fauzi</h3>
         </div>
-        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+        <button type="button" class="modal-close" data-close-modal="" aria-label="Tutup jendela">✕</button>
       </div>
       <form id="quickMessageForm">
         <div class="form-group">
           <label for="senderName">NAMA LENGKAP / INSTANSI</label>
-          <input type="text" id="senderName" class="form-control" placeholder="Contoh: Budi Santoso — HR Manager" required>
+          <input type="text" id="senderName" class="form-control" placeholder="Contoh: Budi Santoso — HR Manager" required="">
         </div>
         <div class="form-group">
           <label for="senderSubject">TOPIK DISKUSI</label>
           <select id="senderSubject" class="form-control">
             <option value="Peluang Kerja / Rekrutmen">Peluang Kerja / Rekrutmen</option>
-            <option value="Kolaborasi Proyek Data & Dashboard">Kolaborasi Proyek Data & Dashboard</option>
-            <option value="Diskusi Sistem & Operasional SDM">Diskusi Sistem & Operasional SDM</option>
+            <option value="Kolaborasi Proyek Data &amp; Dashboard">Kolaborasi Proyek Data &amp; Dashboard</option>
+            <option value="Diskusi Sistem &amp; Operasional SDM">Diskusi Sistem &amp; Operasional SDM</option>
             <option value="Lainnya">Lainnya</option>
           </select>
         </div>
         <div class="form-group">
           <label for="senderMessage">PESAN SINGKAT</label>
-          <textarea id="senderMessage" rows="4" class="form-control" placeholder="Halo Rahmad, saya tertarik untuk berdiskusi lebih lanjut mengenai..." required></textarea>
+          <textarea id="senderMessage" rows="4" class="form-control" placeholder="Halo Rahmad, saya tertarik untuk berdiskusi lebih lanjut mengenai..." required=""></textarea>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;">
           <button type="submit" class="button button-primary">Buka di Aplikasi Email <span>↗</span></button>
@@ -685,7 +1424,7 @@
           <span class="modal-eyebrow">CURRICULUM VITAE — EXECUTIVE SUMMARY</span>
           <h3>Rahmad Rizky Fauzi, S.Kom.</h3>
         </div>
-        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+        <button type="button" class="modal-close" data-close-modal="" aria-label="Tutup jendela">✕</button>
       </div>
       <div class="modal-metrics">
         <div class="modal-metric-box">
@@ -703,16 +1442,16 @@
       </div>
       <div class="modal-section">
         <h4>Profil Profesional</h4>
-        <p>Profesional di bidang Data, Operasional Bisnis, dan Administrasi SDM dengan latar belakang S1 Teknik Informatika. Berpengalaman dalam mengelola database kepegawaian, menyusun laporan analitis, memfasilitasi proses rekrutmen & kontrak kerja, serta mengoptimalkan alur kerja administratif menggunakan perangkat digital.</p>
+        <p>Profesional di bidang Data, Operasional Bisnis, dan Administrasi SDM dengan latar belakang S1 Teknik Informatika. Berpengalaman dalam mengelola database kepegawaian, menyusun laporan analitis, memfasilitasi proses rekrutmen &amp; kontrak kerja, serta mengoptimalkan alur kerja administratif menggunakan perangkat digital.</p>
       </div>
       <div class="modal-section">
         <h4>Kompetensi Inti</h4>
-        <p>• <strong>Data & Reporting:</strong> Microsoft Excel, Google Sheets, Power BI, Data Cleaning, Visualisasi KPI.<br>
-           • <strong>HR & People Operations:</strong> Administrasi Kepegawaian, Rekrutmen, Dokumentasi Kontrak & SK.<br>
-           • <strong>Systems & Workflow:</strong> Penyusunan SOP, Otomatisasi Spreadsheet, HTML/CSS/JS, Pengelolaan Kanal Web.</p>
+        <p>• <strong>Data &amp; Reporting:</strong> Microsoft Excel, Google Sheets, Power BI, Data Cleaning, Visualisasi KPI.<br>
+           • <strong>HR &amp; People Operations:</strong> Administrasi Kepegawaian, Rekrutmen, Dokumentasi Kontrak &amp; SK.<br>
+           • <strong>Systems &amp; Workflow:</strong> Penyusunan SOP, Otomatisasi Spreadsheet, HTML/CSS/JS, Pengelolaan Kanal Web.</p>
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
-        <button type="button" class="button button-outline" data-close-modal>Tutup Ringkasan</button>
+        <button type="button" class="button button-outline" data-close-modal="">Tutup Ringkasan</button>
       </div>
     </div>
   </div>
@@ -722,12 +1461,16 @@
     <div class="modal-dialog" style="width: min(520px, 100%);">
       <div class="modal-header" style="margin-bottom: 12px; padding-bottom: 12px;">
         <div>
-          <span class="modal-eyebrow">QUICK NAVIGATION & ACTIONS</span>
+          <span class="modal-eyebrow">QUICK NAVIGATION &amp; ACTIONS</span>
           <h3 style="font-size: 18px;">Menu Pintasan Portofolio</h3>
         </div>
-        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+        <button type="button" class="modal-close" data-close-modal="" aria-label="Tutup jendela">✕</button>
       </div>
       <div class="cmd-list">
+        <button type="button" class="cmd-item" data-cmd="export">
+          <span>📦 Ambil / Download 3 File Terpisah (HTML, CSS, JS)</span>
+          <small>EXPORT FILES</small>
+        </button>
         <button type="button" class="cmd-item" data-cmd="cv">
           <span>📄 Buka Ringkasan Eksekutif CV</span>
           <small>VIEW SUMMARY</small>
@@ -752,9 +1495,14 @@
     </div>
   </div>
 
-  <!-- Floating Back to Top -->
-  <button type="button" class="floating-top-btn" id="floatingTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+  <!-- Modal 5: 3-File Exporter (HTML, CSS, JS) -->
+  
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body>
-</html>
+  <!-- Floating Back to Top -->
+  <button type="button" class="floating-top-btn visible" id="floatingTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+
+  <div class="toast show" id="toast" role="status" aria-live="polite">Kode index.html berhasil disalin utuh!</div>
+
+  
+
+</body></html>
