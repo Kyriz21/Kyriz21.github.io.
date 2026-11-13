@@ -12,6 +12,8 @@
   
   <!-- Memanggil file CSS eksternal -->
   <link rel="stylesheet" href="style.css">
+  <!-- Memanggil file JS eksternal -->
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
@@ -116,7 +118,7 @@
           <!-- Container Foto Profil Interaktif -->
           <div class="profile-photo-wrapper">
             <div class="profile-photo-card">
-              <!-- Ganti atribut src dengan nama file foto kamu -->
+              <!-- Ganti atribut src="foto-rahmad.jpg" saat di-upload ke GitHub -->
               <img id="profileImage" src="https://placehold.co/560x700/151e30/c8f169?text=RAHMAD+RF" alt="Foto Profil Rahmad Rizky Fauzi">
               <div class="photo-badge-overlay">
                 <div>
@@ -278,7 +280,9 @@
           </div>
         </div>
         <div class="lab-body">
-          <div class="lab-bars" id="labBarsContainer"></div>
+          <div class="lab-bars" id="labBarsContainer">
+            <!-- Diisi dinamis oleh JS -->
+          </div>
           <div class="lab-summary-card">
             <div class="lab-kpi-big" id="labKpiValue">98.5%</div>
             <span class="lab-kpi-caption" id="labKpiLabel">TINGKAT KONSISTENSI STRUKTUR DATA</span>
@@ -316,7 +320,7 @@
 
       <div class="project-grid" id="projectGrid">
         <!-- Project 1 -->
-        <article class="project-card reveal" data-category="data" data-project-id="proj-data" tabindex="0" role="button">
+        <article class="project-card reveal" data-category="data" data-project-id="proj-data" tabindex="0" role="button" aria-label="Buka detail proyek Executive Data & Reporting Dashboard">
           <div class="project-visual visual-dashboard">
             <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
             <div class="visual-window">
@@ -352,7 +356,7 @@
         </article>
 
         <!-- Project 2 -->
-        <article class="project-card reveal reveal-delay-1" data-category="hr" data-project-id="proj-hr" tabindex="0" role="button">
+        <article class="project-card reveal reveal-delay-1" data-category="hr" data-project-id="proj-hr" tabindex="0" role="button" aria-label="Buka detail proyek Sistem Pemantauan Data & Kontrak SDM">
           <div class="project-visual visual-people">
             <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
             <div class="people-board">
@@ -377,7 +381,7 @@
         </article>
 
         <!-- Project 3 -->
-        <article class="project-card reveal reveal-delay-2" data-category="operations" data-project-id="proj-ops" tabindex="0" role="button">
+        <article class="project-card reveal reveal-delay-2" data-category="operations" data-project-id="proj-ops" tabindex="0" role="button" aria-label="Buka detail proyek Digital Workflow & Document Tracker">
           <div class="project-visual visual-system">
             <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
             <div class="system-stack">
@@ -401,7 +405,7 @@
         </article>
 
         <!-- Project 4 -->
-        <article class="project-card reveal reveal-delay-3" data-category="systems" data-project-id="proj-web" tabindex="0" role="button">
+        <article class="project-card reveal reveal-delay-3" data-category="systems" data-project-id="proj-web" tabindex="0" role="button" aria-label="Buka detail proyek Portal Informasi & Kanal Digital Unit">
           <div class="project-visual visual-portal">
             <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
             <div class="portal-mockup">
@@ -726,7 +730,7 @@
       <div class="cmd-list">
         <button type="button" class="cmd-item" data-cmd="cv">
           <span>📄 Buka Ringkasan Eksekutif CV</span>
-          <small>VIEW / PRINT</small>
+          <small>VIEW SUMMARY</small>
         </button>
         <button type="button" class="cmd-item" data-cmd="msg">
           <span>✉ Tulis Pesan Cepat ke Rahmad</span>
@@ -752,8 +756,5 @@
   <button type="button" class="floating-top-btn" id="floatingTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <!-- Tautkan file JS -->
-  <script src="script.js" defer></script>
 </body>
 </html>
