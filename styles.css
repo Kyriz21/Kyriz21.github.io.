@@ -475,6 +475,7 @@ button, input, textarea, select { font: inherit; }
 .ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker-track span { font: 11px var(--mono); letter-spacing: .16em; color: #b8c1cc; }
 .ticker-track b { color: var(--lime); font-size: 15px; }
+@keyframes ticker { to { transform: translateX(-50%); } }
 
 /* Section Defaults */
 .section-pad { padding-top: 112px; padding-bottom: 112px; }
@@ -956,7 +957,7 @@ button, input, textarea, select { font: inherit; }
 .portal-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px; }
 .portal-top span { font: 8px var(--mono); color: var(--cyan); letter-spacing: 0.12em; }
 .portal-top i { width: 18px; height: 6px; border-radius: 99px; background: var(--lime); }
-.portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; my: auto; }
+.portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-block: auto; }
 .portal-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 8px; font: 7px var(--mono); color: #9aa7b8; }
 .portal-box strong { display: block; font-size: 12px; color: #fff; margin-bottom: 2px; }
 .portal-bar { height: 6px; background: rgba(200, 241, 105, 0.2); border-radius: 99px; overflow: hidden; }
@@ -1888,6 +1889,16 @@ body.light-theme .modal-deliverables div b, body.light-theme .cmd-item small { c
   .site-footer > p { grid-column: 1 / -1; grid-row: 2; margin: 0; }
   .footer-right { grid-column: 2; grid-row: 1; gap: 12px; font-size: 8.5px; }
   .footer-brand { grid-column: 1; grid-row: 1; }
+}
+
+/* Clean Print Stylesheet */
+@media print {
+  body { background: #fff !important; color: #000 !important; font-size: 12pt; }
+  .site-header-wrap, .hero-art, .scroll-cue, .ticker, .project-toolbar,
+  .contact, .site-footer, .floating-top-btn, .noise, .scroll-progress,
+  .photo-upload-trigger, .photo-helper-note, .interactive-lab { display: none !important; }
+  .section-pad { padding: 24px 0 !important; }
+  .section-shell, .expertise, .experience { width: 100% !important; padding-inline: 0 !important; background: #fff !important; color: #000 !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
