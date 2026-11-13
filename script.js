@@ -1,4 +1,4 @@
-    /* =====================================================
+/* =====================================================
        KONFIGURASI PROFIL (SILAKAN SESUAIKAN SEBELUM PUBLISH)
        ===================================================== */
     const PORTFOLIO = {
@@ -141,12 +141,17 @@
     });
     $$("#mainNav a, #mainNav button").forEach(link =>
       link.addEventListener("click", () => {
-        if (link.id === "themeToggle") return;
         mainNav.classList.remove("open");
         menuToggle?.setAttribute("aria-expanded", "false");
         menuToggle?.setAttribute("aria-label", "Buka menu");
       })
     );
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 880 && mainNav?.classList.contains("open")) {
+        mainNav.classList.remove("open");
+        menuToggle?.setAttribute("aria-expanded", "false");
+      }
+    });
 
     // 3. Theme Switch (Dark / Light)
     const themeToggle = $("#themeToggle");
@@ -199,16 +204,17 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // 5. Interactive Hero Mouse Parallax & Card Spotlight
+    // 5. Interactive Hero Mouse Parallax (Preserves CSS Rotation) & Card Spotlight
     const heroArt = $("#heroArt");
     const parallaxLayers = $$("[data-depth]", heroArt);
     window.addEventListener("mousemove", e => {
-      if (window.innerWidth < 1024 || !heroArt) return;
+      if (window.innerWidth < 960 || !heroArt) return;
       const x = (window.innerWidth / 2 - e.clientX);
       const y = (window.innerHeight / 2 - e.clientY);
       parallaxLayers.forEach(layer => {
         const depth = parseFloat(layer.dataset.depth || "0.04");
-        layer.style.transform = `translate3d(${x * depth}px, ${y * depth}px, 0)`;
+        layer.style.setProperty("--px", `${(x * depth).toFixed(1)}px`);
+        layer.style.setProperty("--py", `${(y * depth).toFixed(1)}px`);
       });
     });
 
@@ -281,39 +287,12 @@
         if (!isOpen) {
           item.classList.add("open");
           btn.setAttribute("aria-expanded", "true");
-          if (answer) answer.style.maxHeight = `${answer.scrollHeight + 20}px`;
+          if (answer) answer.style.maxHeight = `${answer.scrollHeight + 24}px`;
         }
       });
     });
 
-    // 8. Local Profile Photo Tester, Scroll Reveal & Project Filters
-    const testPhotoBtn = $("#testPhotoBtn");
-    const photoInput = $("#photoInput");
-    const profileImage = $("#profileImage");
-    const savedPhoto = localStorage.getItem("rahmad-portfolio-photo");
-    if (savedPhoto && profileImage) {
-      profileImage.src = savedPhoto;
-    }
-    testPhotoBtn?.addEventListener("click", () => photoInput?.click());
-    photoInput?.addEventListener("change", e => {
-      const file = e.target.files?.[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (profileImage && typeof reader.result === "string") {
-          profileImage.src = reader.result;
-          try {
-            localStorage.setItem("rahmad-portfolio-photo", reader.result);
-          } catch (err) {
-            // Abaikan jika ukuran gambar melebihi kuota localStorage
-          }
-          showToast("Foto profil berhasil diperbarui di pratinjau!");
-        }
-      };
-      reader.readAsDataURL(file);
-    });
-
-    // Scroll Reveal Animations
+    // 8. Scroll Reveal Animations & Project Filters
     const revealItems = $$(".reveal");
     if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       const observer = new IntersectionObserver((entries, currentObserver) => {
@@ -323,7 +302,7 @@
             currentObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      }, { threshold: 0.1 });
       revealItems.forEach(item => observer.observe(item));
     } else {
       revealItems.forEach(item => item.classList.add("is-visible"));
@@ -543,4 +522,3 @@
     // 13. Current Year in Footer
     const yearNow = $("#yearNow");
     if (yearNow) yearNow.textContent = new Date().getFullYear();
-  
