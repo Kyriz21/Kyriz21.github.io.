@@ -1,4 +1,4 @@
-/* =====================================================
+    /* =====================================================
        KONFIGURASI PROFIL (SILAKAN SESUAIKAN SEBELUM PUBLISH)
        ===================================================== */
     const PORTFOLIO = {
@@ -347,12 +347,10 @@
       });
     });
 
-    // 9. Modal Management (Case Study, Quick Message, CV Summary, Command Palette, Exporter)
+    // 9. Modal Management (Case Study, Quick Message, Command Palette)
     const projectModal = $("#projectModal");
     const messageModal = $("#messageModal");
-    const cvModal = $("#cvModal");
     const cmdModal = $("#cmdModal");
-    const exportModal = $("#exportModal");
     let currentProjectId = "proj-data";
 
     function openModal(modalEl) {
@@ -432,10 +430,8 @@
       populateProjectModal(PROJECT_ORDER[nextIdx]);
     });
 
-    // Command Palette & Top Buttons
+    // Command Palette & Quick Message Triggers
     $("#openCmdBtn")?.addEventListener("click", () => openModal(cmdModal));
-    $("#openExportBtn")?.addEventListener("click", () => openModal(exportModal));
-    $("#openCvBtn")?.addEventListener("click", () => openModal(cvModal));
     $("#openQuickMsgBtn")?.addEventListener("click", () => openModal(messageModal));
     $("#heroQuickContact")?.addEventListener("click", () => openModal(messageModal));
 
@@ -443,78 +439,15 @@
       btn.addEventListener("click", () => {
         const action = btn.dataset.cmd;
         closeAllModals();
-        if (action === "export") openModal(exportModal);
-        if (action === "cv") openModal(cvModal);
         if (action === "msg") openModal(messageModal);
         if (action === "copy-email") copyTextToClipboard(targetEmail, `Alamat email (${targetEmail}) berhasil disalin!`);
         if (action === "projects") $("#work")?.scrollIntoView({ behavior: "smooth" });
+        if (action === "experience") $("#experience")?.scrollIntoView({ behavior: "smooth" });
         if (action === "theme") themeToggle?.click();
       });
     });
 
-    // 10. Generator 3 File Terpisah (100% Identik)
-    function buildSeparatedFiles() {
-      const cssContent = ($("#mainStylesheet")?.textContent || "").trim();
-      const jsContent = ($("#mainScript")?.textContent || "").trim();
-
-      const clone = document.documentElement.cloneNode(true);
-      // Hapus style & script internal dari clone, serta reset state sementara
-      $("#mainStylesheet", clone)?.remove();
-      $("#mainScript", clone)?.remove();
-      $("#openExportBtn", clone)?.remove();
-      $("#exportModal", clone)?.remove();
-      $$(".reveal", clone).forEach(el => el.classList.remove("is-visible"));
-      $$(".modal-backdrop", clone).forEach(el => el.classList.remove("is-open"));
-      const contactSoc = $("#contactSocials", clone);
-      if (contactSoc) contactSoc.innerHTML = "";
-
-      const head = $("head", clone);
-      if (head) {
-        head.insertAdjacentHTML(
-          "beforeend",
-          `\n  <!-- Mendukung styles.css maupun style.css -->\n  <link rel="stylesheet" href="styles.css">\n  <link rel="stylesheet" href="style.css">\n  <script src="script.js" defer><\/script>\n`
-        );
-      }
-
-      const htmlContent = "<!doctype html>\n" + clone.outerHTML;
-      return { html: htmlContent, css: cssContent, js: jsContent };
-    }
-
-    const previewBox = $("#exportPreviewBox");
-    const previewLabel = $("#exportPreviewLabel");
-
-    $$("[data-export-copy]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const type = btn.dataset.exportCopy;
-        const files = buildSeparatedFiles();
-        const content = files[type] || "";
-        const filename = type === "html" ? "index.html" : type === "css" ? "styles.css" : "script.js";
-        if (previewBox) previewBox.value = content;
-        if (previewLabel) previewLabel.textContent = `PRATINJAU KODE: ${filename.toUpperCase()} (${content.length} karakter)`;
-        copyTextToClipboard(content, `Kode ${filename} berhasil disalin utuh!`);
-      });
-    });
-
-    $$("[data-export-dl]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const type = btn.dataset.exportDl;
-        const files = buildSeparatedFiles();
-        const content = files[type] || "";
-        const filename = type === "html" ? "index.html" : type === "css" ? "styles.css" : "script.js";
-        const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        showToast(`Mengunduh ${filename}...`);
-      });
-    });
-
-    // 11. Toast Helper & Clipboard Copy Fallback
+    // 10. Toast Helper & Clipboard Copy Fallback
     const toast = $("#toast");
     let toastTimer;
     function showToast(message) {
@@ -551,7 +484,7 @@
       document.body.removeChild(tempInput);
     }
 
-    // 12. Contact & Quick Message Form Logic
+    // 11. Contact & Quick Message Form Logic
     const copyEmailBtn = $("#copyEmail");
     const contactHint = $("#contactHint");
     const targetEmail = PORTFOLIO.email.trim() || "rahmadrizkyfauzi@email.com";
@@ -585,7 +518,7 @@
       copyTextToClipboard(formatted, "Format pesan berhasil disalin ke clipboard!");
     });
 
-    // 13. Render Social Links
+    // 12. Render Social Links
     const contactSocials = $("#contactSocials");
     if (contactSocials) {
       contactSocials.innerHTML = "";
@@ -607,6 +540,7 @@
       });
     }
 
-    // 14. Current Year in Footer
+    // 13. Current Year in Footer
     const yearNow = $("#yearNow");
     if (yearNow) yearNow.textContent = new Date().getFullYear();
+  
