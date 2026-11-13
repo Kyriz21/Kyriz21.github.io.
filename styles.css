@@ -1,4 +1,4 @@
-:root {
+    :root {
       --ink: #0d1320;
       --ink-2: #151e30;
       --ink-3: #1d2940;
@@ -118,7 +118,7 @@
     .main-nav {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 26px;
       flex-wrap: nowrap;
     }
     .main-nav > a {
@@ -148,9 +148,7 @@
     .main-nav > a.active-link::after {
       width: 100%;
     }
-    .main-nav .nav-cv-btn,
-    .main-nav .cmd-trigger-btn,
-    .main-nav .export-code-btn {
+    .main-nav .cmd-trigger-btn {
       font: 10px var(--mono);
       letter-spacing: .06em;
       padding: 7px 11px;
@@ -165,19 +163,9 @@
       gap: 6px;
       transition: all 0.2s;
     }
-    .main-nav .nav-cv-btn:hover,
     .main-nav .cmd-trigger-btn:hover {
       border-color: var(--lime);
       color: var(--lime);
-    }
-    .main-nav .export-code-btn {
-      border-color: rgba(134, 217, 210, 0.45);
-      background: rgba(134, 217, 210, 0.08);
-      color: var(--cyan);
-    }
-    .main-nav .export-code-btn:hover {
-      background: var(--cyan);
-      color: var(--ink);
     }
     .cmd-trigger-btn kbd {
       font: 9px var(--mono);
@@ -1688,72 +1676,6 @@
       color: var(--lime);
     }
 
-    /* 3-File Exporter Modal */
-    .export-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin: 16px 0;
-    }
-    .export-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .export-card strong {
-      font: 14px var(--mono);
-      color: var(--lime);
-      display: block;
-    }
-    .export-card span {
-      font-size: 11.5px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .export-card-actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .export-mini-btn {
-      flex: 1;
-      padding: 8px 10px;
-      font: 10px var(--mono);
-      border-radius: 6px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text);
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.2s;
-    }
-    .export-mini-btn.primary {
-      background: var(--lime);
-      color: #101625;
-      border-color: var(--lime);
-      font-weight: 600;
-    }
-    .export-mini-btn:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-    .code-preview-area {
-      width: 100%;
-      height: 170px;
-      font: 11px var(--mono);
-      background: #080c14;
-      color: #c8f169;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px;
-      resize: vertical;
-    }
-
     /* Floating Back to Top Button */
     .floating-top-btn {
       position: fixed;
@@ -1847,7 +1769,6 @@
     body.light-theme .art-chip { background: #fff; color: #263243; box-shadow: 0 12px 30px rgba(19, 28, 44, .1); border-color: rgba(16, 22, 37, 0.1); }
     body.light-theme .chip-c, body.light-theme .chip-d { color: var(--lime-dark); }
     body.light-theme .brand-name span, body.light-theme .main-nav .nav-contact { color: var(--lime-dark); }
-    body.light-theme .main-nav .export-code-btn { color: #1c6b64; border-color: rgba(28, 107, 100, 0.4); }
     body.light-theme .live-clock { color: #2f7a73; }
     body.light-theme .ticker { background: #e6e7de; }
     body.light-theme .ticker-track span { color: #445165; }
@@ -1871,7 +1792,7 @@
     body.light-theme .modal-deliverables div { color: #263243; background: rgba(16, 22, 37, 0.04); }
     body.light-theme .modal-deliverables div b, body.light-theme .cmd-item small { color: var(--lime-dark); }
 
-    /* Responsive Breakpoints (Termasuk untuk Split-Screen Preview) */
+    /* Responsive Breakpoints */
     @media (max-width: 1024px) {
       .section-shell { width: calc(100% - 40px); }
       .menu-toggle {
@@ -1940,7 +1861,7 @@
       .about-heading h2, .section-heading-row h2, .experience-intro h2 { font-size: 34px; }
       .profile-photo-wrapper { width: 100%; max-width: 280px; }
       .profile-photo-card { width: 100%; height: auto; aspect-ratio: 4/5; }
-      .about-pillars, .expertise-grid, .project-grid, .workflow-steps, .export-grid {
+      .about-pillars, .expertise-grid, .project-grid, .workflow-steps {
         grid-template-columns: 1fr;
         gap: 14px;
       }
@@ -1970,3 +1891,4 @@
       }
       .reveal { opacity: 1; transform: none; }
     }
+  
