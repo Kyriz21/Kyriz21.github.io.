@@ -4,180 +4,756 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101625">
-  <meta name="description" content="Portofolio Rahmad Rizky Fauzi — Data & Reporting, Business Operations, dan HR Administration.">
-  <title>Rahmad Rizky Fauzi — Portfolio</title>
+  <meta name="description" content="Portofolio Rahmad Rizky Fauzi — Data & Reporting, Business Operations, HR Administration, dan Digital Systems.">
+  <title>Rahmad Rizky Fauzi — Data, Operations & HR Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  
+  <!-- Memanggil file CSS eksternal -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   <div class="noise" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Rahmad, kembali ke atas">
-      <span class="brand-mark">R<span>.</span></span>
-      <span class="brand-name">RAHMAD<span>RF</span></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
-      <a href="#about">Tentang</a>
-      <a href="#expertise">Keahlian</a>
-      <a href="#work">Proyek</a>
-      <a href="#experience">Pengalaman</a>
-      <a class="nav-contact" href="#contact">Kontak <span>↗</span></a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">
-        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"/></svg>
+  <!-- Sticky Glass Header -->
+  <div class="site-header-wrap" id="headerWrap">
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Rahmad, kembali ke atas">
+        <span class="brand-mark">R<span>.</span></span>
+        <span class="brand-name">RAHMAD<span>RF</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span>
       </button>
-    </nav>
-  </header>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+        <a href="#about" data-nav="about">Tentang</a>
+        <a href="#expertise" data-nav="expertise">Keahlian</a>
+        <a href="#work" data-nav="work">Proyek</a>
+        <a href="#experience" data-nav="experience">Pengalaman</a>
+        <button type="button" class="nav-cv-btn" id="openCvBtn">Ringkasan CV <span>📄</span></button>
+        <button type="button" class="cmd-trigger-btn" id="openCmdBtn" title="Menu Aksi Cepat (Ctrl+K)">Aksi <kbd>⌘K</kbd></button>
+        <a class="nav-contact" href="#contact" data-nav="contact">Kontak <span>↗</span></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema" title="Ganti tema Gelap/Terang">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"/></svg>
+        </button>
+      </nav>
+    </header>
+  </div>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero section-shell" aria-labelledby="heroTitle">
       <div class="hero-grid-bg" aria-hidden="true"></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="status-dot"></span> PERSONAL PORTFOLIO <span class="eyebrow-year">— 2026</span></p>
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          AVAILABLE FOR COLLABORATION & OPPORTUNITIES
+          <span class="eyebrow-year">— 2026</span>
+        </p>
         <h1 id="heroTitle">Membuat data<br>lebih <em>bermakna.</em></h1>
-        <p class="hero-lead">Saya Rahmad — menghubungkan <strong>data, teknologi, dan operasional</strong> untuk membangun proses kerja yang lebih rapi, informatif, dan mudah dipahami.</p>
+        <p class="hero-lead">
+          Saya <strong>Rahmad Rizky Fauzi</strong> — menghubungkan <strong>data, teknologi, dan operasional SDM</strong> untuk membangun alur kerja yang terstruktur, informatif, serta mudah dipahami dalam pengambilan keputusan.
+        </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Jelajahi proyek <span>↘</span></a>
-          <a class="text-link" href="#about">Kenali saya <span>↗</span></a>
+          <button class="button button-outline" type="button" id="heroQuickContact">Kirim pesan cepat <span>✉</span></button>
         </div>
         <div class="hero-meta">
-          <span><i class="meta-line"></i> Samarinda, Indonesia</span>
-          <span>Data · Operations · Technology</span>
+          <span><i class="meta-line"></i> Samarinda, Kaltim (<span class="live-clock" id="localTime">WITA</span>)</span>
+          <span>S.Kom · Data · HR & Business Operations</span>
         </div>
       </div>
-      <div class="hero-art reveal reveal-delay" aria-label="Ilustrasi abstrak data dan sistem">
-        <div class="art-orbit orbit-one"></div>
-        <div class="art-orbit orbit-two"></div>
-        <div class="art-orbit orbit-three"></div>
-        <div class="art-core"><span>R</span><small>DATA<br>IN MOTION</small></div>
-        <div class="art-chip chip-a"><span class="chip-dot lime"></span> DATA INSIGHT</div>
-        <div class="art-chip chip-b"><span class="chip-bars"><i></i><i></i><i></i><i></i></span> REPORTING</div>
-        <div class="art-chip chip-c">01 <span>STRUCTURE</span></div>
-        <div class="art-cross cross-a">+</div><div class="art-cross cross-b">+</div>
+
+      <div class="hero-art reveal reveal-delay" id="heroArt" aria-label="Ilustrasi abstrak data dan sistem">
+        <div class="art-orbit orbit-one" data-depth="0.03"></div>
+        <div class="art-orbit orbit-two" data-depth="0.05"></div>
+        <div class="art-orbit orbit-three" data-depth="0.02"></div>
+        <div class="art-core" id="artCoreTrigger" title="Klik untuk melihat proyek">
+          <span>R</span>
+          <small>DATA<br>IN MOTION</small>
+        </div>
+        <div class="art-chip chip-a" data-depth="0.06"><span class="chip-dot"></span> DATA INSIGHT</div>
+        <div class="art-chip chip-b" data-depth="0.08"><span class="chip-bars"><i></i><i></i><i></i><i></i></span> REPORTING</div>
+        <div class="art-chip chip-c" data-depth="0.05">01 <span>HR & ADMIN FLOW</span></div>
+        <div class="art-chip chip-d" data-depth="0.07">✳ <span>CLEAN SYSTEM</span></div>
+        <div class="art-cross cross-a">+</div>
+        <div class="art-cross cross-b">+</div>
         <svg class="art-spark" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 0 69 49 120 60 69 71 60 120 51 71 0 60 51 49Z"/></svg>
       </div>
       <a href="#about" class="scroll-cue"><span class="scroll-cue-line"></span> SCROLL TO EXPLORE</a>
     </section>
 
+    <!-- Ticker -->
     <section class="ticker" aria-label="Bidang fokus">
       <div class="ticker-track">
-        <span>DATA ANALYTICS</span><b>✳</b><span>BUSINESS OPERATIONS</span><b>✳</b><span>HR & PEOPLE</span><b>✳</b><span>DIGITAL SYSTEMS</span><b>✳</b>
-        <span>DATA ANALYTICS</span><b>✳</b><span>BUSINESS OPERATIONS</span><b>✳</b><span>HR & PEOPLE</span><b>✳</b><span>DIGITAL SYSTEMS</span><b>✳</b>
+        <span>DATA ANALYTICS & REPORTING</span><b>✳</b>
+        <span>BUSINESS OPERATIONS</span><b>✳</b>
+        <span>HRIS & PEOPLE ADMIN</span><b>✳</b>
+        <span>WORKFLOW AUTOMATION</span><b>✳</b>
+        <span>DIGITAL SYSTEMS</span><b>✳</b>
+        <span>DATA ANALYTICS & REPORTING</span><b>✳</b>
+        <span>BUSINESS OPERATIONS</span><b>✳</b>
+        <span>HRIS & PEOPLE ADMIN</span><b>✳</b>
+        <span>WORKFLOW AUTOMATION</span><b>✳</b>
+        <span>DIGITAL SYSTEMS</span><b>✳</b>
       </div>
     </section>
 
+    <!-- About Section -->
     <section class="about section-shell section-pad" id="about">
-      <div class="section-label reveal"><span>01 / ABOUT</span><span class="label-rule"></span><span>PROFIL SINGKAT</span></div>
+      <div class="section-label reveal">
+        <span>01 / ABOUT</span>
+        <span class="label-rule"></span>
+        <span>PROFIL & PENDEKATAN KERJA</span>
+      </div>
       <div class="about-layout">
-        <div class="about-heading reveal"><h2>Berpikir sistematis.<br><em>Bekerja strategis.</em></h2><p class="big-index">01<span>—</span>04</p></div>
+        <div class="about-heading reveal">
+          <h2>Berpikir sistematis.<br><em>Bekerja strategis.</em></h2>
+          
+          <!-- Container Foto Profil Interaktif -->
+          <div class="profile-photo-wrapper">
+            <div class="profile-photo-card">
+              <!-- Ganti atribut src dengan nama file foto kamu -->
+              <img id="profileImage" src="https://placehold.co/560x700/151e30/c8f169?text=RAHMAD+RF" alt="Foto Profil Rahmad Rizky Fauzi">
+              <div class="photo-badge-overlay">
+                <div>
+                  <strong>Rahmad Rizky Fauzi</strong>
+                  <span>S.Kom · Staff SDI UMKT</span>
+                </div>
+                <button type="button" class="photo-upload-trigger" id="testPhotoBtn" title="Coba pasang fotomu langsung dari perangkat">
+                  Uji Foto 📷
+                </button>
+                <input type="file" id="photoInput" accept="image/*" hidden>
+              </div>
+            </div>
+            <div class="photo-frame"></div>
+          </div>
+          <p class="photo-helper-note">
+            <span>✳</span> Klik <strong>"Uji Foto"</strong> untuk melihat pratinjau fotomu secara langsung.
+          </p>
+        </div>
+
         <div class="about-body reveal reveal-delay">
-          <p class="intro-text">Saya memiliki latar belakang <strong>Teknik Informatika</strong> dan pengalaman di bidang administrasi sumber daya manusia. Ketertarikan saya berada di persimpangan antara pengelolaan data, pemanfaatan teknologi, dan peningkatan proses operasional.</p>
-          <p>Saya menikmati proses mengubah informasi yang tersebar menjadi data yang lebih terstruktur — mulai dari spreadsheet, laporan, dashboard, hingga alur administrasi yang lebih mudah digunakan. Bagi saya, solusi yang baik bukan hanya terlihat menarik, tetapi juga membantu pekerjaan menjadi lebih jelas.</p>
+          <p class="intro-text">
+            Saya memiliki latar belakang akademik <strong>S1 Teknik Informatika</strong> yang dipadukan dengan pengalaman profesional di bidang <strong>Administrasi Sumber Daya Insani (SDM)</strong>. Ketertarikan utama saya berada di titik temu antara pengelolaan data, efisiensi teknologi, dan keandalan operasional.
+          </p>
+          <p>
+            Dalam pekerjaan sehari-hari, saya menikmati proses menyulap informasi yang tersebar menjadi basis data yang bersih, terukur, dan siap pakai — mulai dari perancangan formula <em>spreadsheet</em> otomatis, visualisasi <em>dashboard</em>, dokumentasi kontrak kepegawaian, hingga penyederhanaan alur layanan administratif.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar-box">
+              <h4><span>01</span> Ketelitian & Struktur Data</h4>
+              <p>Menjaga validitas data melalui proses <em>data cleaning</em>, standardisasi format, dan rekonsiliasi berkala.</p>
+            </div>
+            <div class="pillar-box">
+              <h4><span>02</span> Efisiensi Alur Kerja</h4>
+              <p>Merancang template digital dan pelaporan terstruktur agar proses rutin berjalan lebih cepat dan minim kesalahan.</p>
+            </div>
+          </div>
+
           <div class="about-facts">
-            <div><strong>01</strong><span>Data & reporting</span></div>
-            <div><strong>02</strong><span>Process improvement</span></div>
-            <div><strong>03</strong><span>Digital tools</span></div>
+            <div>
+              <strong>04+</strong>
+              <span>Pilar kompetensi utama</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Berorientasi struktur & akurasi</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Sistem dokumentasi terorganisasi</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Expertise Section -->
     <section class="expertise section-shell section-pad" id="expertise">
-      <div class="section-label reveal"><span>02 / EXPERTISE</span><span class="label-rule"></span><span>AREA KOMPETENSI</span></div>
-      <div class="section-heading-row reveal"><h2>Ruang kerja<br><em>yang saya tekuni.</em></h2><p>Beberapa area yang menghubungkan kemampuan teknis, ketelitian administratif, dan pemahaman proses bisnis.</p></div>
+      <div class="section-label reveal">
+        <span>02 / EXPERTISE</span>
+        <span class="label-rule"></span>
+        <span>AREA KOMPETENSI & PERANGKAT KERJA</span>
+      </div>
+      <div class="section-heading-row reveal">
+        <h2>Ruang kerja<br><em>yang saya tekuni.</em></h2>
+        <p>Kombinasi kemampuan analitis, pemahaman logika teknologi informasi, dan ketelitian pengelolaan administrasi organisasi.</p>
+      </div>
+
       <div class="expertise-grid">
         <article class="expertise-card reveal">
-          <div class="card-topline"><span>01</span><span class="card-symbol">↗</span></div>
-          <div class="expertise-icon icon-chart"><i></i><i></i><i></i><i></i></div>
-          <h3>Data & Reporting</h3>
-          <p>Menyusun, membersihkan, dan menyajikan data agar lebih mudah dibaca sebagai bahan pemantauan dan pengambilan keputusan.</p>
-          <div class="tag-list"><span>Excel</span><span>Google Sheets</span><span>Power BI</span><span>Data Cleaning</span></div>
-        </article>
-        <article class="expertise-card reveal reveal-delay-1">
-          <div class="card-topline"><span>02</span><span class="card-symbol">↗</span></div>
-          <div class="expertise-icon icon-flow"><i></i><i></i><i></i><i></i></div>
-          <h3>Business Operations</h3>
-          <p>Mendukung dokumentasi, pelaporan, dan penyusunan alur kerja yang konsisten untuk membantu aktivitas operasional.</p>
-          <div class="tag-list"><span>Documentation</span><span>Workflow</span><span>Reporting</span><span>Administration</span></div>
-        </article>
-        <article class="expertise-card reveal reveal-delay-2">
-          <div class="card-topline"><span>03</span><span class="card-symbol">↗</span></div>
-          <div class="expertise-icon icon-people"><i></i><i></i><i></i></div>
-          <h3>HR & People Operations</h3>
-          <p>Mengelola dukungan administrasi SDM, data kepegawaian, dokumentasi kontrak, dan koordinasi proses rekrutmen.</p>
-          <div class="tag-list"><span>HR Administration</span><span>HR Data</span><span>Recruitment Support</span></div>
-        </article>
-        <article class="expertise-card reveal reveal-delay-3">
-          <div class="card-topline"><span>04</span><span class="card-symbol">↗</span></div>
-          <div class="expertise-icon icon-code"><span>{ }</span></div>
-          <h3>Digital Tools & Systems</h3>
-          <p>Mengeksplorasi pemanfaatan teknologi untuk membuat pekerjaan administratif lebih praktis dan terorganisasi.</p>
-          <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Database</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="work section-shell section-pad" id="work">
-      <div class="section-label reveal"><span>03 / SELECTED WORK</span><span class="label-rule"></span><span>PROYEK PILIHAN</span></div>
-      <div class="section-heading-row work-heading reveal"><h2>Ide yang menjadi<br><em>karya nyata.</em></h2><p>Cuplikan proyek dan eksplorasi. Detail, gambar, serta tautan demo dapat ditambahkan setelah materi proyek final siap.</p></div>
-      <div class="project-toolbar reveal">
-        <span class="toolbar-caption">FILTER PROJECT</span>
-        <div class="filter-group" role="group" aria-label="Filter proyek">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua <small>03</small></button>
-          <button class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
-          <button class="filter-btn" data-filter="operations" aria-pressed="false">Operations</button>
-          <button class="filter-btn" data-filter="hr" aria-pressed="false">HR</button>
-        </div>
-      </div>
-      <div class="project-grid" id="projectGrid">
-        <article class="project-card project-featured reveal" data-category="data">
-          <div class="project-visual visual-dashboard">
-            <div class="visual-window"><div class="window-head"><span></span><span></span><span></span><b>PERFORMANCE OVERVIEW</b></div><div class="dash-content"><div class="dash-sidebar"></div><div class="dash-main"><div class="dash-kpis"><i></i><i></i><i></i></div><div class="dash-chart"><div class="chart-bars"><i style="height:30%"></i><i style="height:48%"></i><i style="height:40%"></i><i style="height:72%"></i><i style="height:59%"></i><i style="height:88%"></i><i style="height:68%"></i></div><div class="chart-line"></div></div><div class="dash-bottom"><i></i><i></i></div></div></div></div>
-            <span class="visual-index">01 / DATA</span>
+          <div>
+            <div class="card-topline"><span>01 / ANALYTICS</span><span class="card-symbol">↗</span></div>
+            <div class="expertise-icon icon-chart"><i></i><i></i><i></i><i></i></div>
+            <h3>Data & Reporting</h3>
+            <p>Mengumpulkan, membersihkan, mengolah, dan memvisualisasikan data menjadi laporan interaktif untuk mendukung pemantauan kinerja dan evaluasi manajemen.</p>
           </div>
-          <div class="project-info"><div class="project-meta"><span>DATA ANALYTICS</span><span>01 — 03</span></div><h3>Business Data & Reporting</h3><p>Eksplorasi penyajian data bisnis melalui ringkasan, indikator, dan visualisasi untuk membantu pembaca memahami kondisi data dengan cepat.</p><div class="project-foot"><div class="tag-list"><span>Power BI</span><span>Excel</span><span>Dashboard</span></div><span class="project-arrow">↗</span></div></div>
+          <div class="tag-list">
+            <span>Microsoft Excel</span>
+            <span>Google Sheets</span>
+            <span>Power BI</span>
+            <span>Data Cleaning</span>
+            <span>Pivot & Lookup</span>
+          </div>
         </article>
-        <article class="project-card reveal reveal-delay-1" data-category="hr">
-          <div class="project-visual visual-people"><div class="people-board"><div class="people-title">PEOPLE<br><em>OVERVIEW</em></div><div class="people-count">128<span>+</span></div><div class="people-caption">DATA STRUCTURE<br>& ADMIN FLOW</div><div class="people-nodes"><i></i><i></i><i></i><i></i><i></i></div></div><span class="visual-index">02 / PEOPLE</span></div>
-          <div class="project-info"><div class="project-meta"><span>HR & ADMINISTRATION</span><span>02 — 03</span></div><h3>HR & Business Operations</h3><p>Portofolio proses administrasi SDM, pengelolaan data, dan dukungan operasional yang menekankan struktur serta konsistensi informasi.</p><div class="project-foot"><div class="tag-list"><span>HR Data</span><span>Spreadsheet</span></div><span class="project-arrow">↗</span></div></div>
+
+        <article class="expertise-card reveal reveal-delay-1">
+          <div>
+            <div class="card-topline"><span>02 / OPERATIONS</span><span class="card-symbol">↗</span></div>
+            <div class="expertise-icon icon-flow"><i></i><i></i><i></i><i></i></div>
+            <h3>Business Operations</h3>
+            <p>Menyusun alur kerja standar (SOP), pelaporan berkala, pelacakan dokumen, serta koordinasi lintas unit agar operasional harian berjalan selaras.</p>
+          </div>
+          <div class="tag-list">
+            <span>Workflow Design</span>
+            <span>SOP & Dokumentasi</span>
+            <span>Process Tracking</span>
+            <span>Reporting</span>
+          </div>
         </article>
-        <article class="project-card reveal reveal-delay-2" data-category="operations">
-          <div class="project-visual visual-system"><div class="system-stack"><div class="stack-card stack-back">DATA INPUT <b>↗</b></div><div class="stack-card stack-mid">PROCESS <b>↗</b></div><div class="stack-card stack-front">CLEAR OUTPUT <b>✳</b></div></div><span class="visual-index">03 / SYSTEM</span></div>
-          <div class="project-info"><div class="project-meta"><span>BUSINESS OPERATIONS</span><span>03 — 03</span></div><h3>Digital Workflow & Tools</h3><p>Eksplorasi template dan alat bantu digital untuk merapikan pencatatan, mempermudah pemantauan, dan menyederhanakan alur kerja.</p><div class="project-foot"><div class="tag-list"><span>Google Sheets</span><span>Workflow</span></div><span class="project-arrow">↗</span></div></div>
+
+        <article class="expertise-card reveal reveal-delay-2">
+          <div>
+            <div class="card-topline"><span>03 / PEOPLE</span><span class="card-symbol">↗</span></div>
+            <div class="expertise-icon icon-people"><i></i><i></i><i></i></div>
+            <h3>HR & People Operations</h3>
+            <p>Mengelola administrasi siklus karyawan: pembaruan database kepegawaian, administrasi rekrutmen, pemantauan masa kontrak, dan surat keputusan.</p>
+          </div>
+          <div class="tag-list">
+            <span>HR Administration</span>
+            <span>Database SDM</span>
+            <span>Rekrutmen</span>
+            <span>Manajemen Kontrak</span>
+          </div>
+        </article>
+
+        <article class="expertise-card reveal reveal-delay-3">
+          <div>
+            <div class="card-topline"><span>04 / TECHNOLOGY</span><span class="card-symbol">↗</span></div>
+            <div class="expertise-icon icon-code"><span>{ }</span></div>
+            <h3>Digital Tools & Systems</h3>
+            <p>Memanfaatkan fondasi Teknik Informatika untuk membangun antarmuka web, mengelola publikasi kanal digital unit, dan mengotomatisasi pekerjaan administrasi.</p>
+          </div>
+          <div class="tag-list">
+            <span>HTML / CSS / JS</span>
+            <span>Relational Database</span>
+            <span>CMS & Web Admin</span>
+            <span>Digital Forms</span>
+          </div>
         </article>
       </div>
-      <p class="project-note"><span>✳</span> Catatan: kartu proyek ini adalah kerangka awal. Ganti deskripsi, visual, dan tautan dengan hasil proyek asli sebelum dipublikasikan.</p>
-    </section>
 
-    <section class="experience section-shell section-pad" id="experience">
-      <div class="section-label reveal"><span>04 / EXPERIENCE</span><span class="label-rule"></span><span>PERJALANAN PROFESIONAL</span></div>
-      <div class="experience-layout">
-        <div class="experience-intro reveal"><h2>Belajar dari<br><em>proses sehari-hari.</em></h2><p>Pengalaman kerja membentuk cara saya memahami kebutuhan pengguna, ketelitian data, dan pentingnya alur kerja yang jelas.</p></div>
-        <div class="timeline reveal reveal-delay">
-          <div class="timeline-item"><div class="timeline-date">DES 2024 — SEKARANG</div><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-type">PROFESSIONAL EXPERIENCE</span><h3>Staff — Biro Sumber Daya Insani</h3><p class="timeline-org">Universitas Muhammadiyah Kalimantan Timur</p><p>Mendukung administrasi SDM, pengelolaan data kepegawaian, rekrutmen, dokumentasi kontrak kerja, pelaporan, serta pembaruan informasi pada kanal digital unit.</p><div class="tag-list"><span>HR Administration</span><span>Data Management</span><span>Coordination</span></div></div></div>
-          <div class="timeline-item"><div class="timeline-date">PENDIDIKAN</div><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-type">EDUCATION</span><h3>S1 Teknik Informatika</h3><p class="timeline-org">Latar belakang akademik</p><p>Membangun fondasi pemahaman teknologi informasi, logika pemecahan masalah, dan pengembangan sistem.</p></div></div>
+      <div class="tools-bar reveal">
+        <div class="tools-bar-title">
+          <i></i> DAILY ECOSYSTEM & TOOLS
+        </div>
+        <div class="tools-pills">
+          <span>Advanced Excel</span>
+          <span>Google Workspace</span>
+          <span>Power BI</span>
+          <span>SQL / Database</span>
+          <span>HTML5 & CSS3</span>
+          <span>JavaScript</span>
+          <span>HRIS Management</span>
+          <span>Git & GitHub</span>
+        </div>
+      </div>
+
+      <!-- Interactive Competency & Impact Simulator -->
+      <div class="interactive-lab reveal" aria-label="Simulasi Fokus & Dampak Kerja">
+        <div class="lab-header">
+          <div class="lab-title-wrap">
+            <span>INTERACTIVE CAPABILITY MATRIX</span>
+            <h3>Simulasi Fokus & Output Kerja</h3>
+          </div>
+          <div class="lab-tabs" role="tablist">
+            <button type="button" class="lab-tab active" data-lab="data" role="tab" aria-selected="true">01 · Data & Reporting</button>
+            <button type="button" class="lab-tab" data-lab="hr" role="tab" aria-selected="false">02 · HR & People Admin</button>
+            <button type="button" class="lab-tab" data-lab="ops" role="tab" aria-selected="false">03 · Digital Workflow</button>
+          </div>
+        </div>
+        <div class="lab-body">
+          <div class="lab-bars" id="labBarsContainer"></div>
+          <div class="lab-summary-card">
+            <div class="lab-kpi-big" id="labKpiValue">98.5%</div>
+            <span class="lab-kpi-caption" id="labKpiLabel">TINGKAT KONSISTENSI STRUKTUR DATA</span>
+            <p id="labDescription">Mengubah data mentah dari berbagai sumber menjadi laporan bersih dan terukur yang siap disajikan kepada manajemen.</p>
+            <div class="lab-deliverable" id="labDeliverable">
+              <strong>Output Utama:</strong> Dashboard KPI, Pivot Otomatis, Rekapitulasi Berkala
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Work / Selected Projects Section -->
+    <section class="work section-shell section-pad" id="work">
+      <div class="section-label reveal">
+        <span>03 / SELECTED WORK</span>
+        <span class="label-rule"></span>
+        <span>STUDI KASUS & EKSPLORASI PROYEK</span>
+      </div>
+      <div class="section-heading-row work-heading reveal">
+        <h2>Ide yang menjadi<br><em>solusi nyata.</em></h2>
+        <p>Klik pada salah satu kartu proyek di bawah untuk membaca detail latar belakang masalah, pendekatan solusi, dan dampaknya.</p>
+      </div>
+
+      <div class="project-toolbar reveal">
+        <span class="toolbar-caption">FILTER KATEGORI PROYEK</span>
+        <div class="filter-group" role="group" aria-label="Filter proyek">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua <small>04</small></button>
+          <button class="filter-btn" data-filter="data" aria-pressed="false">Data & BI <small>01</small></button>
+          <button class="filter-btn" data-filter="hr" aria-pressed="false">HR & People <small>01</small></button>
+          <button class="filter-btn" data-filter="operations" aria-pressed="false">Operations <small>01</small></button>
+          <button class="filter-btn" data-filter="systems" aria-pressed="false">Digital Systems <small>01</small></button>
+        </div>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <!-- Project 1 -->
+        <article class="project-card reveal" data-category="data" data-project-id="proj-data" tabindex="0" role="button">
+          <div class="project-visual visual-dashboard">
+            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+            <div class="visual-window">
+              <div class="window-head"><span></span><span></span><span></span><b>PERFORMANCE & KPI OVERVIEW</b></div>
+              <div class="dash-content">
+                <div class="dash-sidebar"></div>
+                <div class="dash-main">
+                  <div class="dash-kpis"><i></i><i></i><i></i></div>
+                  <div class="dash-chart">
+                    <div class="chart-bars">
+                      <i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i>
+                      <i style="height:76%"></i><i style="height:62%"></i><i style="height:92%"></i><i style="height:74%"></i>
+                    </div>
+                    <div class="chart-line"></div>
+                  </div>
+                  <div class="dash-bottom"><i></i><i></i></div>
+                </div>
+              </div>
+            </div>
+            <span class="visual-index">01 / DATA ANALYTICS</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <div class="project-meta"><span>DATA & REPORTING</span><span>CASE STUDY 01</span></div>
+              <h3>Executive Data & Reporting Dashboard</h3>
+              <p>Perancangan dashboard interaktif dan rekapitulasi metrik utama untuk mempercepat pemantauan tren bulanan, distribusi sumber daya, dan akurasi pelaporan manajemen.</p>
+            </div>
+            <div class="project-foot">
+              <div class="tag-list"><span>Power BI</span><span>Excel Automation</span><span>Data Cleaning</span></div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal reveal-delay-1" data-category="hr" data-project-id="proj-hr" tabindex="0" role="button">
+          <div class="project-visual visual-people">
+            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+            <div class="people-board">
+              <div class="people-title">PEOPLE<br><em>DIRECTORY</em></div>
+              <div class="people-count">100<span>%</span></div>
+              <div class="people-caption">CONTRACT TRACKING<br>& HR DATA FLOW</div>
+              <div class="people-nodes"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="visual-index">02 / HR OPERATIONS</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <div class="project-meta"><span>HR & PEOPLE ADMIN</span><span>CASE STUDY 02</span></div>
+              <h3>Sistem Pemantauan Data & Kontrak SDM</h3>
+              <p>Penataan basis data kepegawaian terpusat lengkap dengan indikator masa berlaku kontrak kerja, pelacakan tahapan rekrutmen, serta pengarsipan dokumen terstruktur.</p>
+            </div>
+            <div class="project-foot">
+              <div class="tag-list"><span>HR Database</span><span>Contract Tracker</span><span>Recruitment</span></div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal reveal-delay-2" data-category="operations" data-project-id="proj-ops" tabindex="0" role="button">
+          <div class="project-visual visual-system">
+            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+            <div class="system-stack">
+              <div class="stack-card stack-back">01 · FORM INPUT & VALIDATION <b>↗</b></div>
+              <div class="stack-card stack-mid">02 · AUTOMATED ROUTING <b>↗</b></div>
+              <div class="stack-card stack-front">03 · STRUCTURED REPORT <b>✳</b></div>
+            </div>
+            <span class="visual-index">03 / WORKFLOW</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <div class="project-meta"><span>BUSINESS OPERATIONS</span><span>CASE STUDY 03</span></div>
+              <h3>Digital Workflow & Document Tracker</h3>
+              <p>Standardisasi alur pengajuan dan pelacakan surat/dokumen operasional menggunakan template spreadsheet pintar untuk memangkas waktu pencarian arsip.</p>
+            </div>
+            <div class="project-foot">
+              <div class="tag-list"><span>Google Sheets</span><span>Workflow SOP</span><span>Process Improvement</span></div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal reveal-delay-3" data-category="systems" data-project-id="proj-web" tabindex="0" role="button">
+          <div class="project-visual visual-portal">
+            <span class="visual-badge-action">LIHAT STUDI KASUS ↗</span>
+            <div class="portal-mockup">
+              <div class="portal-top"><span>DIGITAL PORTAL SYSTEM</span><i></i></div>
+              <div class="portal-grid">
+                <div class="portal-box"><strong>INFO LAYANAN</strong>Terintegrasi</div>
+                <div class="portal-box"><strong>PUBLIKASI</strong>Responsif</div>
+              </div>
+              <div class="portal-bar"><span></span></div>
+            </div>
+            <span class="visual-index">04 / DIGITAL SYSTEM</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <div class="project-meta"><span>WEB & INFORMATION SYSTEM</span><span>CASE STUDY 04</span></div>
+              <h3>Portal Informasi & Kanal Digital Unit</h3>
+              <p>Pengelolaan pembaruan informasi pada kanal digital organisasi serta pengembangan antarmuka web statis yang bersih, cepat, dan mudah diakses oleh sivitas/pengguna.</p>
+            </div>
+            <div class="project-foot">
+              <div class="tag-list"><span>HTML / CSS / JS</span><span>UI Structure</span><span>Web Publishing</span></div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="project-note">
+        <span>✳</span> Tip: Klik pada kartu proyek mana saja untuk membuka jendela rincian studi kasus.
+      </p>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section-shell section-pad" id="experience">
+      <div class="section-label reveal">
+        <span>04 / EXPERIENCE</span>
+        <span class="label-rule"></span>
+        <span>PERJALANAN PROFESIONAL & AKADEMIK</span>
+      </div>
+      <div class="experience-layout">
+        <div class="experience-intro reveal">
+          <h2>Belajar dari<br><em>proses nyata.</em></h2>
+          <p>Pengalaman langsung di lingkungan institusi membentuk ketajaman saya dalam menjaga akurasi data, kerahasiaan administrasi, dan komunikasi antar-unit.</p>
+        </div>
+
+        <div class="timeline reveal reveal-delay">
+          <div class="timeline-item">
+            <div class="timeline-date">DES 2024 — SEKARANG</div>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-type">PROFESSIONAL EXPERIENCE</span>
+              <h3>Staff — Biro Sumber Daya Insani (SDI)</h3>
+              <p class="timeline-org">Universitas Muhammadiyah Kalimantan Timur (UMKT) · Samarinda</p>
+              <ul class="timeline-list">
+                <li>Mengelola dan memperbarui basis data kepegawaian agar selalu akurat serta siap digunakan untuk kebutuhan pelaporan institusi.</li>
+                <li>Mendukung koordinasi proses rekrutmen, seleksi, hingga penyusunan dokumentasi kontrak kerja pegawai/dosen.</li>
+                <li>Menyusun rekapitulasi laporan administrasi SDM dan memastikan kelengkapan arsip fisik maupun digital.</li>
+                <li>Mengelola pembaruan informasi dan publikasi layanan pada kanal digital unit Biro SDI.</li>
+              </ul>
+              <div class="tag-list">
+                <span>HR Administration</span>
+                <span>Data Management</span>
+                <span>Recruitment Support</span>
+                <span>Digital Publishing</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">PENDIDIKAN TINGGI</div>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-type">ACADEMIC BACKGROUND</span>
+              <h3>Sarjana Komputer (S1) — Teknik Informatika</h3>
+              <p class="timeline-org">Fokus: Sistem Informasi, Pengolahan Data & Pengembangan Web</p>
+              <p>Membangun fondasi pemikiran algoritmis, perancangan basis data relasional, rekayasa perangkat lunak, serta pemanfaatan teknologi digital untuk memecahkan masalah operasional secara efisien.</p>
+              <div class="tag-list">
+                <span>Algorithms & Logic</span>
+                <span>Database Systems</span>
+                <span>Web Technologies</span>
+                <span>System Analysis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Step Working Methodology -->
+      <div class="workflow-strip reveal">
+        <div class="workflow-strip-head">
+          <h3>Kerangka Kerja & Pendekatan</h3>
+          <span>HOW I WORK — 01 TO 04</span>
+        </div>
+        <div class="workflow-steps">
+          <div class="workflow-step">
+            <b>STEP 01</b>
+            <h4>Audit & Pemetaan</h4>
+            <p>Memahami kebutuhan pengguna, mengumpulkan sumber data yang tersebar, dan mengidentifikasi hambatan alur kerja.</p>
+          </div>
+          <div class="workflow-step">
+            <b>STEP 02</b>
+            <h4>Strukturisasi & Cleaning</h4>
+            <p>Merapikan format data, menghapus duplikasi, dan merancang skema tabel/dokumen yang konsisten.</p>
+          </div>
+          <div class="workflow-step">
+            <b>STEP 03</b>
+            <h4>Otomatisasi & Visualisasi</h4>
+            <p>Membangun formula, template otomatis, atau dashboard ringkas agar informasi mudah dibaca sekilas.</p>
+          </div>
+          <div class="workflow-step">
+            <b>STEP 04</b>
+            <h4>Dokumentasi & Evaluasi</h4>
+            <p>Menyusun panduan penggunaan (SOP) yang jelas agar sistem mudah dijalankan secara berkelanjutan oleh tim.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recruiter & Collaboration Quick FAQ -->
+      <div class="faq-section reveal">
+        <div class="faq-grid">
+          <div class="faq-intro">
+            <span style="font: 10px var(--mono); color: var(--lime-dark); letter-spacing: 0.12em; display:block; margin-bottom:6px;">QUICK ANSWERS</span>
+            <h3>Informasi Cepat untuk Rekruter & Mitra</h3>
+            <p>Ringkasan terkait fokus peran, kesiapan kolaborasi, dan pendekatan kerja sehari-hari.</p>
+          </div>
+          <div class="faq-list" id="faqList">
+            <div class="faq-item open">
+              <button type="button" class="faq-question" aria-expanded="true">
+                <span>Peran atau bidang apa yang menjadi fokus utama Rahmad?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer" style="max-height: 160px;">
+                <div class="faq-answer-inner">
+                  Fokus utama saya meliputi <strong>Data & Reporting Analyst</strong>, <strong>HR Administration / HRIS Specialist</strong>, <strong>Business Operations</strong>, serta <strong>IT / Digital Administrative Support</strong> yang membutuhkan kombinasi ketelitian data dan pemanfaatan teknologi.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Bagaimana latar belakang Teknik Informatika membantu pekerjaan HR & Operasional?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Latar belakang S1 Teknik Informatika membantu saya berpikir secara terstruktur (logika basis data & sistem). Saya tidak hanya mencatat data secara manual, tetapi merancang formula otomatis, mencegah duplikasi data, dan merapikan alur dokumen digital agar lebih efisien.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Apakah terbuka untuk kolaborasi proyek atau peluang baru?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ya, saya terbuka untuk diskusi profesional, proyek peningkatan sistem/data, maupun peluang karier baik secara <em>On-site</em> (Samarinda & sekitarnya), <em>Hybrid</em>, maupun <em>Remote</em>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact section-shell" id="contact">
       <div class="contact-panel reveal">
         <div class="contact-orbit" aria-hidden="true"></div>
-        <div class="contact-content"><p class="eyebrow"><span class="status-dot"></span> LET'S CONNECT</p><h2>Mari buat sesuatu<br><em>yang berdampak.</em></h2><p>Terbuka untuk bertukar ide, kolaborasi, dan kesempatan baru di bidang data, teknologi, maupun operasional.</p><div class="contact-actions"><a class="button button-light" id="emailLink" href="#">Hubungi saya <span>↗</span></a><button class="copy-button" id="copyEmail" type="button">Salin email <span>⧉</span></button></div><p class="contact-hint" id="contactHint">Lengkapi alamat email dan tautan profil di <code>script.js</code> sebelum website dipublikasikan.</p></div>
-        <div class="contact-stamp"><span>R</span><small>AVAILABLE<br>FOR IDEAS</small></div>
+        <div class="contact-content">
+          <p class="eyebrow"><span class="status-dot"></span> LET'S CONNECT & COLLABORATE</p>
+          <h2>Mari bangun sesuatu<br><em>yang berdampak.</em></h2>
+          <p>Terbuka untuk diskusi, kolaborasi proyek, maupun peluang profesional di bidang Data & Reporting, Business Operations, HR Administration, dan Sistem Digital.</p>
+          <div class="contact-actions">
+            <button class="button button-light" type="button" id="openQuickMsgBtn">Tulis pesan langsung <span>↗</span></button>
+            <button class="button-dark-outline" id="copyEmail" type="button">Salin alamat email <span>⧉</span></button>
+          </div>
+          <!-- Container Link Sosial Media -->
+          <div class="contact-socials" id="contactSocials"></div>
+          <p class="contact-hint" id="contactHint"></p>
+        </div>
+        <div class="contact-stamp">
+          <span>R</span>
+          <small>OPEN FOR<br>OPPORTUNITIES</small>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer section-shell"><a class="brand footer-brand" href="#top"><span class="brand-mark">R<span>.</span></span><span class="brand-name">RAHMAD<span>RF</span></span></a><p>Dirancang dengan rasa ingin tahu dan perhatian pada detail.</p><div class="footer-right"><span>© <span id="yearNow">2026</span> RAHMAD RF</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+  <!-- Footer -->
+  <footer class="site-footer section-shell">
+    <a class="brand footer-brand" href="#top">
+      <span class="brand-mark">R<span>.</span></span>
+      <span class="brand-name">RAHMAD<span>RF</span></span>
+    </a>
+    <p>Dirancang dengan ketelitian struktur data dan perhatian pada detail.</p>
+    <div class="footer-right">
+      <span>© <span id="yearNow">2026</span> RAHMAD RIZKY FAUZI</span>
+      <a href="#top">KEMBALI KE ATAS ↑</a>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Case Study Detail -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow" id="modalCategory">CATEGORY</span>
+          <h3 id="modalTitle">Judul Proyek</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+      </div>
+      <div class="modal-metrics" id="modalMetrics"></div>
+      <div class="modal-section">
+        <h4>01 / Tantangan & Latar Belakang</h4>
+        <p id="modalChallenge"></p>
+      </div>
+      <div class="modal-section">
+        <h4>02 / Solusi & Pendekatan</h4>
+        <p id="modalSolution"></p>
+      </div>
+      <div class="modal-section">
+        <h4>03 / Hasil & Dampak Operasional</h4>
+        <p id="modalOutput"></p>
+      </div>
+      <div class="modal-section">
+        <h4>04 / Komponen & Deliverables</h4>
+        <div class="modal-deliverables" id="modalDeliverables"></div>
+      </div>
+      <div class="tag-list" id="modalTags"></div>
+      <div class="modal-nav-footer">
+        <button type="button" class="modal-nav-btn" id="prevProjBtn">← Proyek Sebelumnya</button>
+        <button type="button" class="modal-nav-btn" id="nextProjBtn">Proyek Berikutnya →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Quick Message Composer -->
+  <div class="modal-backdrop" id="messageModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow">DIRECT MESSAGE COMPOSER</span>
+          <h3>Hubungi Rahmad Rizky Fauzi</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+      </div>
+      <form id="quickMessageForm">
+        <div class="form-group">
+          <label for="senderName">NAMA LENGKAP / INSTANSI</label>
+          <input type="text" id="senderName" class="form-control" placeholder="Contoh: Budi Santoso — HR Manager" required>
+        </div>
+        <div class="form-group">
+          <label for="senderSubject">TOPIK DISKUSI</label>
+          <select id="senderSubject" class="form-control">
+            <option value="Peluang Kerja / Rekrutmen">Peluang Kerja / Rekrutmen</option>
+            <option value="Kolaborasi Proyek Data & Dashboard">Kolaborasi Proyek Data & Dashboard</option>
+            <option value="Diskusi Sistem & Operasional SDM">Diskusi Sistem & Operasional SDM</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="senderMessage">PESAN SINGKAT</label>
+          <textarea id="senderMessage" rows="4" class="form-control" placeholder="Halo Rahmad, saya tertarik untuk berdiskusi lebih lanjut mengenai..." required></textarea>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;">
+          <button type="submit" class="button button-primary">Buka di Aplikasi Email <span>↗</span></button>
+          <button type="button" class="button button-outline" id="copyFormattedMsg">Salin Teks Pesan <span>⧉</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Executive CV Summary -->
+  <div class="modal-backdrop" id="cvModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow">CURRICULUM VITAE — EXECUTIVE SUMMARY</span>
+          <h3>Rahmad Rizky Fauzi, S.Kom.</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+      </div>
+      <div class="modal-metrics">
+        <div class="modal-metric-box">
+          <strong>Samarinda</strong>
+          <span>Kalimantan Timur, ID</span>
+        </div>
+        <div class="modal-metric-box">
+          <strong>S1 Teknik Informatika</strong>
+          <span>Latar Belakang Akademik</span>
+        </div>
+        <div class="modal-metric-box">
+          <strong>Staff Biro SDI</strong>
+          <span>UMKT (Des 2024 – Sekarang)</span>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Profil Profesional</h4>
+        <p>Profesional di bidang Data, Operasional Bisnis, dan Administrasi SDM dengan latar belakang S1 Teknik Informatika. Berpengalaman dalam mengelola database kepegawaian, menyusun laporan analitis, memfasilitasi proses rekrutmen & kontrak kerja, serta mengoptimalkan alur kerja administratif menggunakan perangkat digital.</p>
+      </div>
+      <div class="modal-section">
+        <h4>Kompetensi Inti</h4>
+        <p>• <strong>Data & Reporting:</strong> Microsoft Excel, Google Sheets, Power BI, Data Cleaning, Visualisasi KPI.<br>
+           • <strong>HR & People Operations:</strong> Administrasi Kepegawaian, Rekrutmen, Dokumentasi Kontrak & SK.<br>
+           • <strong>Systems & Workflow:</strong> Penyusunan SOP, Otomatisasi Spreadsheet, HTML/CSS/JS, Pengelolaan Kanal Web.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
+        <button type="button" class="button button-outline" data-close-modal>Tutup Ringkasan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Command Palette (Quick Actions Ctrl+K) -->
+  <div class="modal-backdrop" id="cmdModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="width: min(520px, 100%);">
+      <div class="modal-header" style="margin-bottom: 12px; padding-bottom: 12px;">
+        <div>
+          <span class="modal-eyebrow">QUICK NAVIGATION & ACTIONS</span>
+          <h3 style="font-size: 18px;">Menu Pintasan Portofolio</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Tutup jendela">✕</button>
+      </div>
+      <div class="cmd-list">
+        <button type="button" class="cmd-item" data-cmd="cv">
+          <span>📄 Buka Ringkasan Eksekutif CV</span>
+          <small>VIEW / PRINT</small>
+        </button>
+        <button type="button" class="cmd-item" data-cmd="msg">
+          <span>✉ Tulis Pesan Cepat ke Rahmad</span>
+          <small>DIRECT MESSAGE</small>
+        </button>
+        <button type="button" class="cmd-item" data-cmd="copy-email">
+          <span>⧉ Salin Alamat Email ke Clipboard</span>
+          <small>COPY EMAIL</small>
+        </button>
+        <button type="button" class="cmd-item" data-cmd="projects">
+          <span>↘ Lompat ke Studi Kasus Proyek</span>
+          <small>SECTION 03</small>
+        </button>
+        <button type="button" class="cmd-item" data-cmd="theme">
+          <span>◐ Ganti Tema Tampilan (Gelap / Terang)</span>
+          <small>TOGGLE THEME</small>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top -->
+  <button type="button" class="floating-top-btn" id="floatingTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Tautkan file JS -->
+  <script src="script.js" defer></script>
 </body>
 </html>
